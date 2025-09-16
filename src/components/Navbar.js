@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Figtree } from "next/font/google";
 import Logo from "@/components/Logo";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
@@ -10,6 +11,8 @@ const figtree = Figtree({ subsets: ["latin"] });
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +24,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 ${
+      className={`hidden md:block fixed top-0 left-0 w-full z-50 ${
         figtree.className
       } transition-colors duration-300 ${
         isScrolled ? "bg-white" : "bg-transparent"
@@ -39,10 +42,12 @@ export default function Navbar() {
         <div className="flex-1 flex items-center">
           <SocialMediaIcons isScrolled={isScrolled} />
         </div>
-        {/* Center: Logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-          <Logo isScrolled={isScrolled} />
-        </div>
+        {/* Center: Logo - show when scrolled on homepage, always show on other pages */}
+        {(isScrolled || !isHomepage) && (
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+            <Logo isScrolled={isScrolled} />
+          </div>
+        )}
         {/* Right: Hamburger (mobile) or menu (desktop) */}
         <div className="flex-1 flex justify-end items-center pr-4">
           {/* Desktop menu */}

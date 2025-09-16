@@ -5,10 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#e5aabc", // pink
-        secondary: "#878787", // grey
-        third: "#9fd6dd", // blue
-        fourth: "#dec202", // gold
+        primary: "#61ECE1", // light blue
+        secondary: "#1FE0CE", // medium blue
+        third: "#10D0BB", // darker blue
+        fourth: "#B1EB71", // light green
+        fifth: "#92EF2F", // medium green
+        sixth: "#6ECC09", // dark green
         black: "#222222", // Black
       },
       keyframes: {

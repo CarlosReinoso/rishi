@@ -2,12 +2,11 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import SectionHero from "../../components/SectionHero";
-import { EMAIL_ADDRESS } from "../../constants";
+import { EMAIL_ADDRESS, INSTAGRAM_PROFILE } from "../../constants";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     message: "",
   });
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -24,9 +23,9 @@ export default function ContactPage() {
     e.preventDefault();
 
     // Create mailto link with prepopulated information
-    const subject = encodeURIComponent("Contact Form - Embody Perthshire");
+    const subject = encodeURIComponent("Contact Form - The Speech Heroes");
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\n\nMessage:\n${formData.message}`
     );
     const mailtoLink = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`;
 
@@ -35,12 +34,12 @@ export default function ContactPage() {
 
     // Show success message
     setSubmitStatus("success");
-    setFormData({ name: "", phone: "", message: "" });
+    setFormData({ name: "", message: "" });
   };
 
   return (
     <>
-      <SectionHero title="" />
+      <SectionHero title="Contact The Speech Heroes" />
 
       {/* Main Contact Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-third/10">
@@ -104,25 +103,6 @@ export default function ContactPage() {
 
                     <div>
                       <label
-                        htmlFor="phone"
-                        className="block text-black font-medium mb-2"
-                      >
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-
-                    <div>
-                      <label
                         htmlFor="message"
                         className="block text-black font-medium mb-2"
                       >
@@ -136,7 +116,7 @@ export default function ContactPage() {
                         required
                         rows={6}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"
-                        placeholder="Tell me about your needs or ask any questions..."
+                        placeholder="Tell us about your interest in The Speech Heroes or ask any questions..."
                       />
                     </div>
 
@@ -161,17 +141,18 @@ export default function ContactPage() {
             >
               <div>
                 <h2 className="text-3xl md:text-4xl font-playfair text-black mb-6">
-                  Let's Start Your Journey
+                  Join the Speech Heroes Journey
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mb-8"></div>
-                <p className="text-lg text-secondary leading-relaxed mb-6">
-                  If you'd like to find out more about neurological
-                  physiotherapy, joining a class, or have a question about my
-                  services, please get in touch using the form.
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Whether you're interested in booking a school visit, have
+                  questions about our book, or want to learn more about
+                  supporting children with speech and language delays, we'd love
+                  to hear from you.
                 </p>
-                <p className="text-lg text-secondary leading-relaxed">
-                  Fill in your name, phone number, and message, and I'll respond
-                  as soon as possible.
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Fill in your details and message, and we'll respond as soon as
+                  possible.
                 </p>
               </div>
 
@@ -197,44 +178,51 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-third/20 rounded-full flex items-center justify-center">
-                      <span className="text-third text-xl">📞</span>
+                      <span className="text-third text-xl">📱</span>
                     </div>
                     <div>
-                      <p className="text-black font-medium">Phone</p>
+                      <p className="text-black font-medium">Instagram</p>
                       <a
-                        href="tel:07833516585"
+                        href={INSTAGRAM_PROFILE}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-primary hover:text-primary/80 transition-colors"
                       >
-                        07833516585
+                        @_thespeechheroes
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Service Areas */}
+              {/* What We Offer */}
               <div className="bg-gradient-to-br from-third/10 to-primary/10 p-8 rounded-2xl border border-third/20">
                 <h3 className="text-xl font-playfair text-black mb-4">
-                  Service Areas
+                  What We Offer
                 </h3>
-                <p className="text-secondary mb-4">
-                  Serving clients across Perth and Highland Perthshire. Online
-                  sessions are also available.
+                <p className="text-gray-600 mb-4">
+                  We provide school visits, workshops, and resources to support
+                  children with speech and language delays.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <div className="bg-white px-4 py-2 rounded-full shadow-sm">
                     <span className="text-black font-medium text-sm">
-                      Perth City
+                      School Visits
                     </span>
                   </div>
                   <div className="bg-white px-4 py-2 rounded-full shadow-sm">
                     <span className="text-black font-medium text-sm">
-                      Highland Perthshire
+                      Workshops
                     </span>
                   </div>
                   <div className="bg-white px-4 py-2 rounded-full shadow-sm">
                     <span className="text-black font-medium text-sm">
-                      Online Sessions
+                      Children's Book
+                    </span>
+                  </div>
+                  <div className="bg-white px-4 py-2 rounded-full shadow-sm">
+                    <span className="text-black font-medium text-sm">
+                      Music & Resources
                     </span>
                   </div>
                 </div>
@@ -266,19 +254,19 @@ export default function ContactPage() {
                 icon: "📞",
                 title: "Quick Response",
                 description:
-                  "I aim to respond to all messages within 24 hours during business days.",
+                  "We aim to respond to all messages within 24 hours during business days.",
               },
               {
-                icon: "🏠",
-                title: "Home Visits",
+                icon: "🏫",
+                title: "School Visits",
                 description:
-                  "Convenient home visits available across Perth and Highland Perthshire.",
+                  "Interactive workshops and storytelling sessions for schools and groups.",
               },
               {
-                icon: "💻",
-                title: "Online Sessions",
+                icon: "📚",
+                title: "Educational Resources",
                 description:
-                  "Virtual consultations available for those who prefer remote sessions.",
+                  "Books, music, and materials to support children with speech and language delays.",
               },
             ].map((item, index) => (
               <motion.div

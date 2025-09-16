@@ -1,18 +1,24 @@
+import SpeechHeroesHero from "@/components/SpeechHeroesHero";
 import WelcomeSection from "@/components/WelcomeSection";
-import Hero from "../components/Hero";
-import WhyChooseSection from "@/components/WhyChooseSection";
-import ServicesSection from "@/components/ServicesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import AboutSection from "@/components/AboutSection";
+import CharactersSection from "@/components/CharactersSection";
+import MusicSection from "@/components/MusicSection";
+import BookSection from "@/components/BookSection";
+import WorkshopsSection from "@/components/WorkshopsSection";
+import ResourcesSection from "@/components/ResourcesSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
     <div className="bg-white text-black">
-      <Hero />
+      <SpeechHeroesHero />
       <WelcomeSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <TestimonialsSection />
+      <AboutSection />
+      <CharactersSection />
+      <MusicSection />
+      <BookSection />
+      <WorkshopsSection />
+      <ResourcesSection />
       <ContactSection />
     </div>
   );

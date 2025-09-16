@@ -15,36 +15,36 @@ const figtree = Figtree({
 
 export const generateMetadata = async () => {
   return {
-    title: "Embody Perthshire | Specialist Neurological Physiotherapy & Pilates",
+    title: "The Speech Heroes | Empowering Children with Speech & Language Delays",
     description:
-      "Specialist neurological physiotherapy, Pilates, yoga and exercise therapy in Perthshire. Helping you move with confidence and live more actively with personalised care from Carol Doherty.",
+      "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice, and show them they are stronger than they think.",
     keywords:
-      "neurological physiotherapy, physiotherapy Perthshire, Pilates Perthshire, yoga therapy, exercise specialist, neurological rehabilitation, movement therapy, Carol Doherty physiotherapist, Perthshire physiotherapy, neurological conditions, stroke rehabilitation, MS physiotherapy, Parkinson's physiotherapy",
-    authors: [{ name: "Carol Doherty" }],
-    creator: "Carol Doherty",
-    publisher: "Embody Perthshire",
+      "speech and language delay, children's book, speech therapy, language development, superheroes, children's music, speech heroes, word stoppers, Aryan Kaushal, Rishi Kaushal, speech and language UK, children's resources, inclusive education",
+    authors: [{ name: "The Kaushal Family" }],
+    creator: "Rishi Kaushal",
+    publisher: "The Speech Heroes",
     formatDetection: {
       email: false,
       address: false,
       telephone: false,
     },
-    metadataBase: new URL("https://embodyperthshire.co.uk"), // Replace with your actual domain
+    metadataBase: new URL("https://thespeechheroes.com"), // Replace with your actual domain
     alternates: {
       canonical: "/",
     },
     openGraph: {
       title:
-        "Embody Perthshire | Specialist Neurological Physiotherapy & Pilates",
+        "The Speech Heroes | Empowering Children with Speech & Language Delays",
       description:
-        "Specialist neurological physiotherapy, Pilates, yoga and exercise therapy in Perthshire. Helping you move with confidence and live more actively.",
-      url: "https://embodyperthshire.co.uk", // Replace with your actual domain
-      siteName: "Embody Perthshire",
+        "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice.",
+      url: "https://thespeechheroes.com", // Replace with your actual domain
+      siteName: "The Speech Heroes",
       images: [
         {
-          url: "/hero-desktop.jpg", // Your hero image
+          url: "/Speech heroes png.png", // Your hero image
           width: 1200,
           height: 630,
-          alt: "Carol Doherty - Specialist Neurological Physiotherapist at Embody Perthshire",
+          alt: "The Speech Heroes - Empowering Children with Speech & Language Delays",
         },
       ],
       locale: "en_GB",
@@ -53,10 +53,10 @@ export const generateMetadata = async () => {
     twitter: {
       card: "summary_large_image",
       title:
-        "Embody Perthshire | Specialist Neurological Physiotherapy & Pilates",
+        "The Speech Heroes | Empowering Children with Speech & Language Delays",
       description:
-        "Specialist neurological physiotherapy, Pilates, yoga and exercise therapy in Perthshire. Helping you move with confidence.",
-      images: ["/hero-desktop.jpg"], // Your hero image
+        "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice.",
+      images: ["/Speech heroes png.png"], // Your hero image
     },
     robots: {
       index: true,
@@ -74,27 +74,26 @@ export const generateMetadata = async () => {
     other: {
       "application/ld+json": JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Physician",
-        name: "Carol Doherty",
-        jobTitle: "Specialist Neurological Physiotherapist",
-        worksFor: {
-          "@type": "Organization",
-          name: "Embody Perthshire",
-        },
+        "@type": "Organization",
+        name: "The Speech Heroes",
         description:
-          "Specialist Neurological Physiotherapist and Pilates, Yoga & Exercise Specialist",
+          "A world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice.",
+        founder: {
+          "@type": "Person",
+          name: "Rishi Kaushal"
+        },
         address: {
           "@type": "PostalAddress",
-          addressRegion: "Perthshire",
           addressCountry: "GB",
         },
         specialty: [
-          "Neurological Physiotherapy",
-          "Pilates",
-          "Yoga Therapy",
-          "Exercise Specialist",
+          "Speech and Language Delay",
+          "Children's Books",
+          "Educational Resources",
+          "School Workshops",
+          "Children's Music"
         ],
-        url: "https://embodyperthshire.co.uk",
+        url: "https://thespeechheroes.com",
       }),
     },
   };

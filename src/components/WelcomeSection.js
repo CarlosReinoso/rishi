@@ -1,140 +1,248 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 export default function WelcomeSection() {
-  const images = [
-    "/IMG-20250813-WA0102.jpg",
-    "/IMG-20250813-WA0105.jpg",
-    "/IMG-20250813-WA0106.jpg",
-    "/IMG-20250813-WA0107.jpg",
-    "/IMG-20250813-WA0108.jpg",
-    "/IMG-20250813-WA0109.jpg",
-    "/hero-desktop.jpg",
-    "/hero-mobile.jpg",
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentImageIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
-        setIsTransitioning(false);
-      }, 800); // Wait for fade-out to complete before changing image
-    }, 6000); // Change image every 6 seconds
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  const goToImage = (index) => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentImageIndex(index);
-      setIsTransitioning(false);
-    }, 800);
-  };
-
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-third/10">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-sky-50 to-blue-50">
+      <div className="container mx-auto px-4 md:px-8">
+        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-4xl lg:text-5xl font-playfair text-black mb-6">
-            Welcome to Embody Perthshire
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            Welcome to The Speech Heroes
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl h-[600px]">
-              <div
-                key={currentImageIndex}
-                className="w-full h-full transition-opacity duration-1000 ease-in-out"
-              >
+        {/* Content with Image */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Father and Son Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative flex justify-center"
+            >
+              <div className="relative w-80 h-80 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer">
                 <Image
-                  src={images[currentImageIndex]}
-                  alt="Carol Doherty - Specialist Neurological Physiotherapist"
-                  fill
-                  className="object-cover"
-                  priority={currentImageIndex === 0}
+                  src="/father-and-son.jpeg"
+                  alt="Father and son - The Speech Heroes family journey"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                {/* Interactive overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Heart icon overlay */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute top-4 right-4 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <span className="text-red-500 text-lg">❤️</span>
+                </motion.div>
               </div>
 
-              {/* Navigation Dots */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToImage(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all duration-500 ${
-                      index === currentImageIndex
-                        ? "bg-white scale-110"
-                        : "bg-white/40 hover:bg-white/60"
-                    }`}
-                    aria-label={`Go to image ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </motion.div>
+              {/* Enhanced floating decorative elements */}
+              <motion.div
+                animate={{
+                  y: [0, -15, 0],
+                  rotate: [0, 10, 0],
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -top-6 -right-6 w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full opacity-70 shadow-lg"
+              />
+              <motion.div
+                animate={{
+                  y: [0, -20, 0],
+                  rotate: [0, -15, 0],
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+                className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-70 shadow-lg"
+              />
+              <motion.div
+                animate={{
+                  y: [0, -12, 0],
+                  x: [0, 8, 0],
+                  rotate: [0, 8, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 2,
+                }}
+                className="absolute top-1/2 -left-8 w-6 h-6 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full opacity-60 shadow-lg"
+              />
+              <motion.div
+                animate={{
+                  y: [0, -18, 0],
+                  x: [0, -10, 0],
+                  rotate: [0, -12, 0],
+                }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 3,
+                }}
+                className="absolute top-1/3 -right-8 w-7 h-7 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-60 shadow-lg"
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <h3 className="text-2xl md:text-3xl font-playfair text-black mb-6">
-              I'm Carol Doherty
-            </h3>
-            <p className="text-lg text-secondary leading-relaxed">
-              A Specialist Neurological Physiotherapist and Pilates, Yoga &
-              Exercise Specialist with over a decade of experience helping
-              people move with confidence.
-            </p>
-            <p className="text-lg text-secondary leading-relaxed">
-              I combine clinical expertise with an encouraging, client-centred
-              approach, supporting you to move better, feel stronger, and live
-              more actively.
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-4">
-              <div className="bg-primary/20 px-4 py-2 rounded-full">
-                <span className="text-black font-medium">
-                  Neurological Physiotherapy
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-700"
+            >
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                Every child and every parent is a{" "}
+                <span className="font-semibold text-blue-600">superhero</span>{" "}
+                in their own way. Sometimes our powers are{" "}
+                <span className="font-semibold text-blue-600">loud</span>,
+                sometimes they are{" "}
+                <span className="font-semibold text-purple-600">quiet</span> but
+                they are always there, waiting to be{" "}
+                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
+                  unlocked
                 </span>
-              </div>
-              <div className="bg-third/20 px-4 py-2 rounded-full">
-                <span className="text-black font-medium">Pilates & Yoga</span>
-              </div>
-              <div className="bg-fourth/20 px-4 py-2 rounded-full">
-                <span className="text-black font-medium">
-                  Exercise Specialist
+                .
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                viewport={{ once: true }}
+              >
+                The Speech Heroes is a world where{" "}
+                <span className="font-semibold text-blue-600">imagination</span>{" "}
+                meets{" "}
+                <span className="font-semibold text-purple-600">
+                  real-life challenges
                 </span>
-              </div>
-            </div>
-          </motion.div>
+                . Inspired by our own journey as a family, we created songs,
+                stories and characters that give children with speech and
+                language delays a{" "}
+                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">
+                  voice
+                </span>
+                .
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+                viewport={{ once: true }}
+              >
+                Here, every adventure is about{" "}
+                <span className="font-semibold text-blue-600">courage</span>,{" "}
+                <span className="font-semibold text-purple-600">
+                  connection
+                </span>
+                , and finding ways to be{" "}
+                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+                  heard
+                </span>
+                . Whether you are a parent, teacher, speech and language
+                therapist, professional, or young reader, you are part of this
+                superhero team.
+              </motion.p>
+            </motion.div>
+          </div>
         </div>
+
+        {/* Decorative Elements */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mt-12 flex justify-center space-x-4"
+        >
+          <motion.div
+            animate={{
+              y: [0, -10, 0],
+              rotate: [0, 5, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-8 h-8 bg-blue-400 rounded-full opacity-60"
+          />
+          <motion.div
+            animate={{
+              y: [0, -15, 0],
+              rotate: [0, -5, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+            className="w-6 h-6 bg-purple-400 rounded-full opacity-60"
+          />
+          <motion.div
+            animate={{
+              y: [0, -8, 0],
+              rotate: [0, 3, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+            className="w-10 h-10 bg-pink-400 rounded-full opacity-60"
+          />
+          <motion.div
+            animate={{
+              y: [0, -12, 0],
+              rotate: [0, -3, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.5,
+            }}
+            className="w-7 h-7 bg-yellow-400 rounded-full opacity-60"
+          />
+        </motion.div>
       </div>
     </section>
   );

@@ -11,17 +11,19 @@ export default function Button({
   variant = "primary",
 }) {
   const baseClasses =
-    "group px-8 py-3 text-lg rounded-full transition-colors duration-300 shadow-lg inline-flex items-center gap-2";
+    "group px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-2 transform hover:scale-105";
 
   const variantClasses =
     variant === "secondary"
-      ? "bg-gray-500 text-white hover:bg-gray-600"
-      : "bg-primary text-white hover:bg-primary/80";
+      ? "bg-sixth text-white hover:bg-sixth/90 border-2 border-sixth"
+      : variant === "outline"
+      ? "bg-transparent text-white border-2 border-white hover:bg-white hover:text-black"
+      : "bg-primary text-black hover:bg-primary/90 border-2 border-primary";
 
   const buttonClasses = `${baseClasses} ${variantClasses} ${className}`;
 
   const arrow = showArrow ? (
-    <span className="text-white inline-block transition-transform duration-300 group-hover:translate-x-1">
+    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
       {arrowDirection === "right" ? "→" : "←"}
     </span>
   ) : null;

@@ -1,317 +1,309 @@
 "use client";
 import Image from "next/image";
-import SectionHero from "../../components/SectionHero";
 import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <>
-      <SectionHero title="" />
+    <div className="bg-white text-black">
+      {/* Hero Section */}
+      <section className="relative py-24 md:py-32 bg-gradient-to-br from-primary/20 to-secondary/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black font-playfair mb-6">
+              About The Speech Heroes
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              A family's journey from challenge to hope, creating a world where
+              every child's voice matters
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-      {/* Hero Section with Image */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-third/10">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Main Content */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-lg max-w-none">
+            {/* Family Story */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair mb-8">
+                Our Story
+              </h2>
+
+              <div className="space-y-6 text-gray-700 leading-relaxed">
+                <p className="text-lg">
+                  We're the Kaushal family — Rishi, Priya, and Aryan — a family
+                  on a mission to raise awareness about speech and language
+                  delays in children.
+                </p>
+
+                <p>
+                  Our journey began when Aryan, now five years old, was
+                  diagnosed with a speech and language delay. Like many
+                  families, we faced the worry and uncertainty of navigating a
+                  world not always built to understand children who communicate
+                  differently.
+                </p>
+
+                <p>
+                  With limited support available rather than feeling alone, we
+                  chose to turn our experience into something creative and
+                  hopeful. In the winter of 2024 with Rishi's imagination,
+                  Priya's steady support, and Aryan's determination,{" "}
+                  <strong>The Speech Heroes were born!</strong>
+                </p>
+
+                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary my-8">
+                  <p className="text-lg font-medium text-black italic">
+                    "A world of story, song, and superheroes built on empathy
+                    and expression."
+                  </p>
+                </div>
+
+                <p>
+                  Priya has been a constant source of encouragement behind the
+                  scenes, and care to every step of the journey. Rishi, a
+                  creative advocate and runner who has long raised awareness on
+                  issues like domestic abuse and homelessness, now uses his
+                  energy to spotlight the importance of communication for all
+                  children.
+                </p>
+
+                <p className="text-lg font-medium text-third">
+                  Our hope is that The Speech Heroes brings comfort to families
+                  like ours and reminds every child that their voice, in
+                  whatever form, is powerful.
+                </p>
+
+                <p>
+                  Aryan has channeled his creativity to create The Speech
+                  Heroes, with Rishi supporting and driving the project forward
+                  as founder.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right side - Family Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/hero-mobile.jpg"
-                  alt="Carol Doherty - Specialist Neurological Physiotherapist"
-                  width={500}
-                  height={600}
-                  className="rounded-2xl shadow-2xl"
+                  src="/Family Pic.jpg"
+                  alt="The Kaushal Family - Rishi, Priya, and Aryan"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-              </div>
-            </motion.div>
+                {/* Overlay with family names */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent p-6">
+                  <div className="relative">
+                    {/* Branded accent line */}
+                    <div className="absolute -top-2 left-0 w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-3xl md:text-4xl font-playfair text-black mb-6">
-                Meet Carol Doherty
-              </h2>
-              <p className="text-lg text-secondary leading-relaxed">
-                As a specialist neurological physiotherapist and experienced
-                exercise instructor, I am passionate about helping people
-                enhance their quality of life through movement. Guided by a deep
-                desire to make a meaningful difference, I have built a career
-                that combines clinical expertise with years of teaching
-                experience to support people in feeling stronger, healthier, and
-                more confident in their everyday lives.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <div className="bg-primary/20 px-4 py-2 rounded-full">
-                  <span className="text-black font-medium">Expert Support</span>
-                </div>
-                <div className="bg-third/20 px-4 py-2 rounded-full">
-                  <span className="text-black font-medium">
-                    Movement for Life
-                  </span>
-                </div>
-                <div className="bg-fourth/20 px-4 py-2 rounded-full">
-                  <span className="text-black font-medium">Home Visits</span>
+                    <div className="text-white space-y-2">
+                      <h3 className="text-2xl md:text-3xl font-bold font-playfair tracking-wide text-white">
+                        The Kaushal Family
+                      </h3>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-fourth rounded-full"></div>
+                        <p className="text-base font-medium text-primary/90 tracking-wide">
+                          Rishi, Priya, and Aryan
+                        </p>
+                        <div className="w-2 h-2 bg-fourth rounded-full"></div>
+                      </div>
+                    </div>
+
+                    {/* Subtle brand pattern overlay */}
+                    <div className="absolute top-0 right-0 w-20 h-20 opacity-10">
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* My Journey Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black mb-6">
-              My Journey Into Physiotherapy
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-playfair text-black mb-6">
-                The Beginning
-              </h3>
-              <p className="text-lg text-secondary mb-6 leading-relaxed">
-                My journey began with a deep desire to make a meaningful
-                difference in people’s lives. Even before qualifying as a
-                physiotherapist, I was teaching exercise classes and discovering
-                how movement could transform health and wellbeing. Over time,
-                these two paths came together — physiotherapy gave me a deeper
-                understanding of anatomy and movement, while teaching Pilates,
-                yoga and community fitness showed me how people can build
-                strength, improve balance and enhance their overall health
-                through exercise.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-playfair text-black mb-6">
-                Specialising in Neurological Care
-              </h3>
-              <p className="text-lg text-secondary mb-6 leading-relaxed">
-                During my training and early career, I discovered a particular
-                passion for neurological physiotherapy. I was drawn to the
-                complexity and challenge of helping people with these
-                conditions, where every individual’s journey is unique. Working
-                with people living with diagnoses such as Multiple Sclerosis,
-                Parkinson’s and other long-term neurological challenges has
-                shown me the importance of personalised, compassionate care to
-                support progress and improve quality of life.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* My Approach Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-third/10 to-primary/10">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-playfair text-black mb-6">
-              My Approach to Care
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-primary text-xl">❤️</span>
-                </div>
-                <h3 className="text-xl font-playfair text-black">
-                  Person-Centred Care
-                </h3>
-              </div>
-              <p className="text-secondary leading-relaxed">
-                I believe in treating the whole person, not just their
-                condition. Every individual has unique goals, challenges, and
-                circumstances. My approach is to listen, understand, and work
-                together to create a treatment plan that fits your life and
-                aspirations.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-fourth/20 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-fourth text-xl">🌟</span>
-                </div>
-                <h3 className="text-xl font-playfair text-black">
-                  Holistic Care
-                </h3>
-              </div>
-              <p className="text-secondary leading-relaxed">
-                I take a whole-person approach — combining clinical expertise
-                with encouragement and care. My focus is on supporting progress
-                not only during sessions but also in everyday life, helping you
-                build confidence, strength, and independence where it matters
-                most.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-third/20 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-third text-xl">🏠</span>
-                </div>
-                <h3 className="text-xl font-playfair text-black">
-                  Home-Based Care
-                </h3>
-              </div>
-              <p className="text-secondary leading-relaxed">
-                I chose to offer home visits because I believe rehabilitation is
-                most effective in your natural environment. Working in your home
-                allows me to see how you move and function in your daily life,
-                leading to more practical and meaningful treatment.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* What Drives Me Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black mb-6">
-              What Drives Me
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Seeing Progress",
-                description:
-                  " There’s nothing more rewarding than witnessing someone regain their confidence and independence.",
-                icon: "🌟",
-              },
-              {
-                title: "Building Relationships",
-                description:
-                  "I value the relationships I build with my clients and their families. Trust and understanding are the foundation of effective rehabilitation.",
-                icon: "🤝",
-              },
-              {
-                title: "Making a Difference",
-                description:
-                  "Every day, I have the privilege of supporting people to improve their quality of life and reach their goals.",
-                icon: "💪",
-              },
-            ].map((motivation, index) => (
+              {/* Floating decorative elements */}
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-primary/5 to-third/5 p-6 rounded-2xl border border-primary/10"
-              >
-                <div className="text-3xl mb-4">{motivation.icon}</div>
-                <h3 className="text-xl font-playfair text-black mb-3">
-                  {motivation.title}
-                </h3>
-                <p className="text-secondary leading-relaxed">
-                  {motivation.description}
+                animate={{
+                  y: [0, -10, 0],
+                  rotate: [0, 5, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -top-4 -right-4 w-8 h-8 bg-fourth rounded-full opacity-60"
+              />
+              <motion.div
+                animate={{
+                  y: [0, -15, 0],
+                  rotate: [0, -5, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+                className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full opacity-60"
+              />
+            </motion.div>
+
+            {/* Mission Statement */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair mb-8 mt-16">
+                Our Mission
+              </h2>
+
+              <div className="bg-gradient-to-br from-fourth/10 to-fifth/10 rounded-2xl p-8">
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                  The Speech Heroes is a world where imagination meets real-life
+                  challenges. Inspired by our own journey as a family, we
+                  created songs, stories and characters that give children with
+                  speech and language delays a voice, and show them they are
+                  stronger than they think.
                 </p>
-              </motion.div>
-            ))}
+
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Here, every adventure is about courage, connection, and
+                  finding ways to be heard. Whether you are a parent, teacher,
+                  speech and language therapist, professional, or young reader,
+                  you are part of this superhero team.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Values */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair mb-8">
+                Our Values
+              </h2>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-primary/20">
+                  <div className="text-4xl mb-4">💪</div>
+                  <h3 className="text-xl font-bold text-black mb-3">
+                    Strength
+                  </h3>
+                  <p className="text-gray-600">
+                    Every child has inner strength waiting to be unlocked,
+                    regardless of how they communicate.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-secondary/20">
+                  <div className="text-4xl mb-4">🤝</div>
+                  <h3 className="text-xl font-bold text-black mb-3">Support</h3>
+                  <p className="text-gray-600">
+                    Families need understanding, resources, and a community that
+                    celebrates all voices.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-third/20">
+                  <div className="text-4xl mb-4">🎨</div>
+                  <h3 className="text-xl font-bold text-black mb-3">
+                    Creativity
+                  </h3>
+                  <p className="text-gray-600">
+                    Imagination and creative expression are powerful tools for
+                    communication and growth.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Call to Action */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-black mb-4">
+                  Join Our Mission
+                </h3>
+                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                  Whether you're a parent, educator, or supporter, you can help
+                  us spread awareness and create a more inclusive world for all
+                  children.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:from-secondary hover:to-third transition-all duration-300 transform hover:scale-105"
+                  >
+                    Get in Touch
+                    <svg
+                      className="ml-2 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="/book"
+                    className="inline-flex items-center px-6 py-3 bg-white text-primary font-medium rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105"
+                  >
+                    Get the Book
+                    <svg
+                      className="ml-2 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Areas Covered Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-third/10">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-playfair text-black mb-6">
-              Serving Perth and Highland Perthshire
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
-            <p className="text-lg text-secondary max-w-2xl mx-auto mb-8">
-              I provide home visits throughout Perth City and Highland
-              Perthshire, bringing specialist neurological physiotherapy care
-              directly to your door.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white px-6 py-3 rounded-full shadow-lg">
-                <span className="text-black font-medium">Perth City</span>
-              </div>
-              <div className="bg-white px-6 py-3 rounded-full shadow-lg">
-                <span className="text-black font-medium">
-                  Highland Perthshire
-                </span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }
