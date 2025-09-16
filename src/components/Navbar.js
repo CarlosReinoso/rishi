@@ -23,74 +23,119 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`hidden md:block fixed top-0 left-0 w-full z-50 ${
-        figtree.className
-      } transition-colors duration-300 ${
-        isScrolled ? "bg-white" : "bg-transparent"
-      }`}
-      style={{ pointerEvents: "auto" }}
-    >
-      <nav
-        className={`max-w-7xl mx-auto flex items-center justify-between px-4 py-4 ${
-          isScrolled ? "md:py-10" : "md:py-16"
+    <>
+      {/* Desktop Navbar - hidden on mobile, visible on desktop */}
+      <header
+        className={`hidden md:block fixed top-0 left-0 w-full z-50 ${
+          figtree.className
         } transition-colors duration-300 ${
-          isScrolled ? "text-black" : "text-white"
+          isScrolled ? "bg-white" : "bg-transparent"
         }`}
+        style={{ pointerEvents: "auto" }}
       >
-        {/* Left: Social Media Icons */}
-        <div className="flex-1 flex items-center">
-          <SocialMediaIcons isScrolled={isScrolled} />
-        </div>
-        {/* Center: Logo - show when scrolled on homepage, always show on other pages */}
-        {(isScrolled || !isHomepage) && (
-          <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-            <Logo isScrolled={isScrolled} />
+        <nav
+          className={`max-w-7xl mx-auto flex items-center justify-between px-4 py-4 ${
+            isScrolled ? "md:py-10" : "md:py-16"
+          } transition-colors duration-300 ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
+        >
+          {/* Left: Social Media Icons */}
+          <div className="flex-1 flex items-center">
+            <SocialMediaIcons isScrolled={isScrolled} />
           </div>
-        )}
-        {/* Right: Hamburger (mobile) or menu (desktop) */}
-        <div className="flex-1 flex justify-end items-center pr-4">
-          {/* Desktop menu */}
-          <div
-            className={`hidden lg:flex gap-4 xl:gap-6 text-base font-medium font-figtree transition-colors duration-300 ${
-              isScrolled ? "text-black" : "text-white"
-            }`}
-          >
-            {NAV_ITEMS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className={`relative group hover:text-primary text-xs md:text-sm lg:text-sm xl:text-base whitespace-nowrap ${
-                  isScrolled ? "text-black" : "text-white"
-                }`}
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
-          </div>
-          {/* Hamburger for mobile */}
-          <button
-            className="lg:hidden ml-4 focus:outline-none"
-            aria-label="Open menu"
-            onClick={() => setOpen(true)}
-          >
-            <svg
-              className="w-7 h-7"
-              fill="none"
-              stroke={isScrolled ? "black" : "white"}
-              strokeWidth="2"
-              viewBox="0 0 24 24"
+          {/* Center: Logo - show when scrolled on homepage, always show on other pages */}
+          {(isScrolled || !isHomepage) && (
+            <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+              <Logo isScrolled={isScrolled} />
+            </div>
+          )}
+          {/* Right: Hamburger (mobile) or menu (desktop) */}
+          <div className="flex-1 flex justify-end items-center pr-4">
+            {/* Desktop menu */}
+            <div
+              className={`hidden lg:flex gap-4 xl:gap-6 text-base font-medium font-figtree transition-colors duration-300 ${
+                isScrolled ? "text-black" : "text-white"
+              }`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-      </nav>
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={`relative group hover:text-primary text-xs md:text-sm lg:text-sm xl:text-base whitespace-nowrap ${
+                    isScrolled ? "text-black" : "text-white"
+                  }`}
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
+            </div>
+            {/* Hamburger for mobile */}
+            <button
+              className="lg:hidden ml-4 focus:outline-none"
+              aria-label="Open menu"
+              onClick={() => setOpen(true)}
+            >
+              <svg
+                className="w-7 h-7"
+                fill="none"
+                stroke={isScrolled ? "black" : "white"}
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Navbar - only show on non-homepage pages */}
+      {!isHomepage && (
+        <header
+          className={`md:hidden fixed top-0 left-0 w-full z-50 ${figtree.className} transition-colors duration-300 bg-white`}
+          style={{ pointerEvents: "auto" }}
+        >
+          <nav className="max-w-7xl mx-auto flex items-center justify-between px-8 py-8 text-black">
+            {/* Left: Social Media Icons */}
+            <div className="flex-1 flex items-center">
+              <SocialMediaIcons isScrolled={true} />
+            </div>
+            {/* Center: Logo */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+              <Logo isScrolled={true} />
+            </div>
+            {/* Right: Hamburger */}
+            <div className="flex-1 flex justify-end items-center pr-4">
+              <button
+                className="ml-4 focus:outline-none"
+                aria-label="Open menu"
+                onClick={() => setOpen(true)}
+              >
+                <svg
+                  className="w-7 h-7"
+                  fill="none"
+                  stroke="black"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </header>
+      )}
+
       {/* Mobile Modal */}
       {open && (
         <div className="fixed inset-0 bg-black bg-opacity-60 z-40 flex justify-end">
@@ -123,6 +168,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

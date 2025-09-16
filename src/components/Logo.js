@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Logo({ isScrolled, onClick }) {
   return (
-    <div className="flex-1 flex justify-center md:justify-center mt-8 md:mt-0">
+    <div className="flex-1 flex justify-center md:justify-center ">
       <Link
         onClick={onClick}
         href="/"
