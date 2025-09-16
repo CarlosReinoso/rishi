@@ -15,9 +15,15 @@ const figtree = Figtree({
 
 export const generateMetadata = async () => {
   return {
-    title: "The Speech Heroes | Empowering Children with Speech & Language Delays",
+    title:
+      "The Speech Heroes | Empowering Children with Speech & Language Delays",
     description:
       "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice, and show them they are stronger than they think.",
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/Aryan png.png",
+    },
     keywords:
       "speech and language delay, children's book, speech therapy, language development, superheroes, children's music, speech heroes, word stoppers, Aryan Kaushal, Rishi Kaushal, speech and language UK, children's resources, inclusive education",
     authors: [{ name: "The Kaushal Family" }],
@@ -80,7 +86,7 @@ export const generateMetadata = async () => {
           "A world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice.",
         founder: {
           "@type": "Person",
-          name: "Rishi Kaushal"
+          name: "Rishi Kaushal",
         },
         address: {
           "@type": "PostalAddress",
@@ -91,7 +97,7 @@ export const generateMetadata = async () => {
           "Children's Books",
           "Educational Resources",
           "School Workshops",
-          "Children's Music"
+          "Children's Music",
         ],
         url: "https://thespeechheroes.com",
       }),
