@@ -72,7 +72,7 @@ export default function ResourcesSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-black mb-8 text-center lg:text-left">
+            <h3 className="text-2xl font-bold text-black font-playfair mb-8 text-center lg:text-left">
               Helpful Resources
             </h3>
 
@@ -90,9 +90,9 @@ export default function ResourcesSection() {
                     <div className="text-3xl">{resource.icon}</div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-lg font-bold text-black">
+                        <h6 className="text-lg font-bold text-black font-figtree">
                           {resource.title}
-                        </h4>
+                        </h6>
                         <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">
                           {resource.category}
                         </span>
@@ -135,7 +135,7 @@ export default function ResourcesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-black mb-8 text-center lg:text-left">
+            <h3 className="text-2xl font-bold text-black font-playfair mb-8 text-center lg:text-left">
               If You're Concerned About a Child's Speech
             </h3>
 
@@ -149,7 +149,9 @@ export default function ResourcesSection() {
                   viewport={{ once: true }}
                   className="bg-gradient-to-r from-fourth/10 to-fifth/10 rounded-lg p-4 border-l-4 border-fourth"
                 >
-                  <h4 className="font-bold text-black mb-2">{tip.title}</h4>
+                  <h6 className="font-bold text-black font-figtree mb-2">
+                    {tip.title}
+                  </h6>
                   <p className="text-gray-600 text-sm">{tip.description}</p>
                 </motion.div>
               ))}
@@ -163,7 +165,7 @@ export default function ResourcesSection() {
               viewport={{ once: true }}
               className="mt-8 bg-gradient-to-r from-third/20 to-primary/20 rounded-xl p-6 text-center"
             >
-              <h4 className="text-lg font-bold text-black mb-3">
+              <h4 className="text-lg font-bold text-black font-figtree mb-3">
                 Need More Support?
               </h4>
               <p className="text-gray-600 mb-4">

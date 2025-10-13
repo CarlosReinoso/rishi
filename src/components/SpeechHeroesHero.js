@@ -120,18 +120,16 @@ export default function SpeechHeroesHero() {
         className="hidden md:block relative h-screen flex items-center justify-center overflow-hidden pt-20"
         style={{ backgroundColor: "#74E9E3" }}
       >
-        <Image
-          src="/hero-desktop.png"
-          alt="The Speech Heroes - Empowering Children with Speech & Language Delays"
-          fill
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-            zIndex: 0,
-          }}
-          priority
-          className="object-cover"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
         {/* Calmer gradient overlay - sky blue to white */}
         {/* <div
@@ -197,7 +195,7 @@ export default function SpeechHeroesHero() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="mb-6"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight drop-shadow-2xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-playfair mb-4 leading-tight drop-shadow-2xl">
                 The Speech Heroes
               </h1>
               <motion.div

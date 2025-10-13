@@ -16,15 +16,14 @@ export default function BookSection() {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              {/* Placeholder for book cover - will be replaced with actual book image */}
-              <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-40 bg-gradient-to-br from-primary to-secondary rounded-lg mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">📚</span>
-                  </div>
-                  <p className="text-gray-600">Book cover coming soon!</p>
-                </div>
-              </div>
+              <Image
+                src="/book-cover.jpg"
+                alt="The Speech Heroes vs. The Word Stoppers - Book Cover"
+                width={400}
+                height={600}
+                className="w-full h-auto object-cover"
+                priority
+              />
             </div>
 
             {/* Floating decorative elements */}
@@ -72,38 +71,49 @@ export default function BookSection() {
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg font-medium text-third">
-                The Speech Heroes vs. The Word Stoppers is now available!
+                The Speech Heroes Vs. The Word Stoppers is now available!
               </p>
-              
+
               <p>
-                This uplifting picture book follows a young boy and his father as they take on imaginative villains representing the real-life challenges of Speech and Language delay.
+                In a world full of noise, Aryan discovers the power of
+                communication in many forms.
+              </p>
+
+              <p>
+                Join Aryan as he faces the Word Stoppers, villains every child
+                with a Speech and Language delay knows and follow him as he
+                becomes the Superhero of his own story.
+              </p>
+
+              <p>
+                A powerful colourful picture book about courage, communication,
+                and the magic of every voice. Packed with comic-style energy,
+                The Speech Heroes delivers a thrilling superhero adventure that
+                children will love
+              </p>
+
+              <p>
+                The book is aimed at children aged 4 to 8, along with their
+                families, practitioners, and professionals who support them.
               </p>
 
               <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary">
-                <h3 className="text-lg font-bold text-black mb-3">Book Features:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    Two art styles: soft, traditional look for real-life scenes and action-packed comic style for the superhero world
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    Aimed at children aged 4 to 8, families, and educators
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    Offers hope, encouragement, and representation for all kinds of voices
-                  </li>
-                </ul>
+                <h3 className="text-lg font-bold text-black mb-3">Review:</h3>
+                <p className="text-gray-700 italic mb-4">
+                  'The Speech Heroes' offers a thoughtful and unique portrayal
+                  of the emotions and experiences of a young child with speech,
+                  language, and communication needs. These are based around the
+                  first-hand experiences of Aryan and his father, Rishi who have
+                  been working jointly to raise awareness and educate others.
+                  This book is highly recommended for children, families,
+                  caregivers, and educators supporting young people.
+                </p>
+                <p className="text-gray-600 font-medium">
+                  Sahar Nashir
+                  <br />
+                  Specialist Speech and Language Therapist
+                </p>
               </div>
-
-              <p>
-                The book features two art styles: a soft, traditional look for real-life scenes and an action-packed comic style for the superhero world.
-              </p>
-
-              <p className="text-lg font-medium">
-                Perfect for children aged 4 to 8, families, and educators, the story offers hope, encouragement, and representation for all kinds of voices.
-              </p>
             </div>
 
             <motion.div
@@ -118,11 +128,21 @@ export default function BookSection() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:from-secondary hover:to-third transition-all duration-300 transform hover:scale-105 text-lg"
               >
                 Get Your Copy Today
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"
+                  />
                 </svg>
               </a>
-              
+
               <p className="text-sm text-gray-500">
                 *Coming soon to Amazon - link will be added when live
               </p>

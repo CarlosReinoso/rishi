@@ -14,8 +14,8 @@ export default function Home() {
       <SpeechHeroesHero />
       <WelcomeSection />
       <AboutSection />
-      <CharactersSection />
       <MusicSection />
+      <CharactersSection />
       <BookSection />
       <WorkshopsSection />
       <ResourcesSection />

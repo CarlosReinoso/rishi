@@ -18,51 +18,78 @@ export default function MusicSection() {
           >
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-playfair">
-                Our Music Project
+                Our Music Project - Speech Bound
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-fourth to-fifth rounded-full"></div>
             </div>
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg">
-                Last year something clicked for Aryan after his first term at school where he had been learning phonics; he discovered a love for music, rhythm, and even beatboxing.
-              </p>
-              
-              <p>
-                One evening in their living room, Rishi noticed that Aryan connected to music and enjoyed singing, he turned to Priya and said, "It's time to make a song." She looked at him like, "What are you on about?".
+                Last year something clicked for Aryan after his first term at
+                school where he had been learning phonics; he discovered a love
+                for music, rhythm, and even beatboxing.
               </p>
 
               <p>
-                What started as a wild idea slowly spiralled into something real. With no prior music experience, Rishi and Aryan took several weeks to write lyrics for the song, continuing to practice each night until it was perfect. They then recorded the track using a kids' headset, a rode mic, and basic recording software. They poured their hearts into every take.
+                One evening in their living room, Rishi noticed that Aryan
+                connected to music and enjoyed singing, he turned to Priya and
+                said, "It's time to make a song."
               </p>
 
               <p>
-                From there, they dreamed even bigger; creating a full script for a children's music video with absolutely zero budget. Every scene was built from imagination, determination, and the belief that a message about speech and language delay could be powerful, fun, and full of heart.
+                What started as a wild idea slowly spiralled into something
+                real. With no prior music experience, Rishi and Aryan took
+                several weeks to write lyrics for their song, continuing to
+                practice each night until it was perfect. With help from their
+                trusted friend Ranjit they recorded the track using a kids'
+                headset, a rode mic, and basic recording software.
+              </p>
+
+              <p>
+                From there, they dreamed even bigger; creating a full script for
+                a children's music video with absolutely zero budget. Every
+                scene was built from Rishi's imagination, determination, and the
+                belief that a message about Speech and Language delay could be
+                powerful, fun, and full of heart.
               </p>
 
               <div className="bg-white/60 rounded-xl p-6 border-l-4 border-fourth">
                 <p className="text-lg font-medium text-black">
-                  This song reflects Aryan's struggles and Rishi's encouragement as a father. It was released on World Voice Day along with a heartwarming children's video.
+                  Speech Bound reflects Aryan's struggles and Rishi's
+                  encouragement as a dad. It was released on World Voice Day. As
+                  part of this project, they launched a fundraiser for Speech
+                  and Language UK, setting out to raise £5,000 to support the 2
+                  million children in the UK affected by Speech and Language
+                  delays.
                 </p>
               </div>
 
               <p>
-                As part of this project, they launched a fundraiser for Speech and Language UK, setting out to raise £5,000 to support the 2 million children in the UK affected by Speech and Language delays (1 in 5 children).
+                The song has since led to radio features on BBC Radio WM with
+                Mya Khan and featured on a number of podcasts and live shows.
+                Rishi and Aryan have been touring Youth Festivals and performed
+                in front of hundreds of people.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="bg-white/60 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-fourth">£2,000</div>
-                  <div className="text-sm text-gray-600">Raised to date</div>
+                  <div className="text-2xl font-bold text-fourth">£2000</div>
+                  <div className="text-sm text-gray-600">raised to date</div>
                 </div>
                 <div className="bg-white/60 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-fourth">BBC Radio</div>
-                  <div className="text-sm text-gray-600">Featured on WM & Unity FM</div>
+                  <div className="text-2xl font-bold text-fourth">
+                    BBC Radio
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Featured on WM & Unity FM
+                  </div>
                 </div>
               </div>
 
               <p className="text-lg font-medium text-third">
-                It has become a rallying call for awareness, inclusion, and creative expression for all children who find it hard to be heard.
+                Speech Bound has become a rallying call for awareness,
+                inclusion, and creative expression for all children who find it
+                hard to be heard.
               </p>
             </div>
 
@@ -80,8 +107,18 @@ export default function MusicSection() {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-fourth to-fifth text-white font-medium rounded-full hover:from-fifth hover:to-sixth transition-all duration-300 transform hover:scale-105"
               >
                 Watch the Music Video
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z" />
+                <svg
+                  className="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"
+                  />
                 </svg>
               </a>
             </motion.div>

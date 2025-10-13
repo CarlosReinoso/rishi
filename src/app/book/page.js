@@ -18,10 +18,6 @@ export default function BookPage() {
               Get the Book
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-fourth to-fifth rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              The Speech Heroes vs. The Word Stoppers - An uplifting picture
-              book that helps children find their voice
-            </p>
           </motion.div>
         </div>
       </section>
@@ -39,17 +35,14 @@ export default function BookPage() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                {/* Placeholder for book cover - will be replaced with actual book image */}
-                <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-48 h-64 bg-gradient-to-br from-primary to-secondary rounded-lg mx-auto mb-4 flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-4xl">📚</span>
-                    </div>
-                    <p className="text-gray-600 font-medium">
-                      Book cover coming soon!
-                    </p>
-                  </div>
-                </div>
+                <Image
+                  src="/book-cover.jpg"
+                  alt="The Speech Heroes vs. The Word Stoppers - Book Cover"
+                  width={400}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
               </div>
 
               {/* Floating decorative elements */}
@@ -103,7 +96,7 @@ export default function BookPage() {
                 </p>
 
                 <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary">
-                  <h3 className="text-lg font-bold text-black mb-3">
+                  <h3 className="text-lg font-bold text-black font-playfair mb-3">
                     Book Features:
                   </h3>
                   <ul className="space-y-2 text-gray-700">
@@ -121,10 +114,6 @@ export default function BookPage() {
                       <span className="text-primary mr-2">•</span>
                       Offers hope, encouragement, and representation for all
                       kinds of voices
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      Includes discussion questions for parents and teachers
                     </li>
                   </ul>
                 </div>
@@ -250,6 +239,91 @@ export default function BookPage() {
                   className="w-full h-auto object-cover"
                   priority
                 />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Author */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Author Photo */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/rishi.png"
+                  alt="Rishi Kaushal - Author"
+                  width={500}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+            </motion.div>
+
+            {/* Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair">
+                  Meet the Author
+                </h2>
+                <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+              </div>
+
+              <div className="space-y-6 text-gray-700 leading-relaxed">
+                <p className="text-lg">
+                  I am Rishi Kaushal, a dad whose biggest inspiration is my son
+                  Aryan. Aryan battles with Developmental Language Disorder, and
+                  our family has learnt that this journey is not a short one.
+                  Every day brings new challenges, but we face them together,
+                  and as a father I will always encourage Aryan to rise, to try
+                  again, and to know his voice matters.
+                </p>
+
+                <p>
+                  That determination is what inspired The Speech Heroes. In this
+                  story, children see the battles that take place inside the
+                  mind of every kid with a Speech and Language delay, with
+                  villains that try to stop words and the confidence and bravery
+                  it takes to overcome them.
+                </p>
+
+                <div className="bg-white/60 rounded-xl p-6 border-l-4 border-primary">
+                  <p className="text-lg font-medium text-black">
+                    "I wrote this book because I know how many children live
+                    with Speech and Language difficulties, and how it can leave
+                    families feeling unseen or isolated. This book is my way of
+                    showing that no child is alone in this journey."
+                  </p>
+                </div>
+
+                <p>
+                  Our battle continues, but we will not give in. Through
+                  creativity, storytelling, and connection, I want to help
+                  children everywhere believe in their own superpowers.
+                </p>
+
+                <p className="text-lg font-medium text-third">
+                  Looking ahead, my dream is for The Speech Heroes to grow into
+                  more than just a book. I want it to become a leading space for
+                  children's tools and resources. A place families, schools,
+                  professionals and communities can come to for support,
+                  creativity and hope.
+                </p>
               </div>
             </motion.div>
           </div>

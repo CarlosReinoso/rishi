@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { getAryanAgeText } from "@/utils/ageCalculator";
 
 export default function AboutPage() {
   return (
@@ -45,29 +46,29 @@ export default function AboutPage() {
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-lg">
                   We're the Kaushal family — Rishi, Priya, and Aryan — a family
-                  on a mission to raise awareness about speech and language
+                  on a mission to raise awareness about Speech and Language
                   delays in children.
                 </p>
 
                 <p>
-                  Our journey began when Aryan, now five years old, was
-                  diagnosed with a speech and language delay. Like many
-                  families, we faced the worry and uncertainty of navigating a
-                  world not always built to understand children who communicate
-                  differently.
+                  Our journey began when Aryan, now {getAryanAgeText()}, was
+                  diagnosed with a Speech and Language delay in particular
+                  Developmental Language Delay. Like many families, we faced the
+                  worry and uncertainty of navigating a world not always built
+                  to understand children who communicate differently.
                 </p>
 
                 <p>
                   With limited support available rather than feeling alone, we
                   chose to turn our experience into something creative and
-                  hopeful. In the winter of 2024 with Rishi's imagination,
-                  Priya's steady support, and Aryan's determination,{" "}
+                  hopeful. Last year with Rishi's imagination, Priya's steady
+                  support, and Aryan's determination,{" "}
                   <strong>The Speech Heroes were born!</strong>
                 </p>
 
                 <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary my-8">
                   <p className="text-lg font-medium text-black italic">
-                    "A world of story, song, and superheroes built on empathy
+                    "A world of story, song, and Superheroes built on empathy
                     and expression."
                   </p>
                 </div>
@@ -76,7 +77,7 @@ export default function AboutPage() {
                   Priya has been a constant source of encouragement behind the
                   scenes, and care to every step of the journey. Rishi, a
                   creative advocate and runner who has long raised awareness on
-                  issues like domestic abuse and homelessness, now uses his
+                  issues like Domestic Abuse and Homelessness, now uses his
                   energy to spotlight the importance of communication for all
                   children.
                 </p>
@@ -86,22 +87,16 @@ export default function AboutPage() {
                   like ours and reminds every child that their voice, in
                   whatever form, is powerful.
                 </p>
-
-                <p>
-                  Aryan has channeled his creativity to create The Speech
-                  Heroes, with Rishi supporting and driving the project forward
-                  as founder.
-                </p>
               </div>
             </motion.div>
 
-            {/* Right side - Family Image */}
+            {/* Family Image Section */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative"
+              className="mb-16"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image

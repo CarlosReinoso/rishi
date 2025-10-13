@@ -14,9 +14,9 @@ export default function WelcomeSection() {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
             Welcome to The Speech Heroes
-          </h2>
+          </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
@@ -127,7 +127,7 @@ export default function WelcomeSection() {
                 viewport={{ once: true }}
               >
                 Every child and every parent is a{" "}
-                <span className="font-semibold text-blue-600">superhero</span>{" "}
+                <span className="font-semibold text-blue-600">Superhero</span>{" "}
                 in their own way. Sometimes our powers are{" "}
                 <span className="font-semibold text-blue-600">loud</span>,
                 sometimes they are{" "}
@@ -151,13 +151,13 @@ export default function WelcomeSection() {
                 <span className="font-semibold text-purple-600">
                   real-life challenges
                 </span>
-                . Inspired by our own journey as a family, we created songs,
-                stories and characters that give children with speech and
-                language delays a{" "}
+                . Inspired by our own journey as a family, we have created
+                songs, stories and characters that give children with Speech and
+                Language delays a{" "}
                 <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">
                   voice
                 </span>
-                .
+                , and show them they are stronger than they think.
               </motion.p>
 
               <motion.p
@@ -177,7 +177,7 @@ export default function WelcomeSection() {
                 </span>
                 . Whether you are a parent, teacher, speech and language
                 therapist, professional, or young reader, you are part of this
-                superhero team.
+                Speech Heroes team.
               </motion.p>
             </motion.div>
           </div>
