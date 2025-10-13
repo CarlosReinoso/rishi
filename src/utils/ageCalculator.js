@@ -1,19 +1,24 @@
 // Calculate Aryan's age based on his birthday
-// Aryan's birthday is assumed to be in 2018 (making him 6 years old in 2024)
+// Aryan's birthday is 15th November 2019
 // This is a dynamic calculation based on the current date
 
 export function getAryanAge() {
-  // Assuming Aryan was born in 2018
-  const birthYear = 2018;
-  const currentYear = new Date().getFullYear();
-  const currentMonth = new Date().getMonth();
+  // Aryan was born on 15th November 2019
+  const birthDate = new Date(2019, 10, 15); // Month is 0-indexed, so 10 = November
+  const currentDate = new Date();
 
-  // If we're past September (assuming birthday is in September), he's the full age
-  // Otherwise, he's one year younger
-  const age =
-    currentMonth >= 8 ? currentYear - birthYear : currentYear - birthYear - 1;
+  let age = currentDate.getFullYear() - birthDate.getFullYear();
+  const monthDiff = currentDate.getMonth() - birthDate.getMonth();
 
-  return Math.max(age, 6); // Ensure minimum age of 6
+  // If the birthday hasn't occurred this year yet, subtract 1
+  if (
+    monthDiff < 0 ||
+    (monthDiff === 0 && currentDate.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+
+  return Math.max(age, 0); // Ensure minimum age of 0
 }
 
 export function getAryanAgeText() {

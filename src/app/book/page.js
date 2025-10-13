@@ -37,7 +37,7 @@ export default function BookPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/book-cover.jpg"
-                  alt="The Speech Heroes vs. The Word Stoppers - Book Cover"
+                  alt="The Speech Heroes Vs. The Word Stoppers - Book Cover"
                   width={400}
                   height={600}
                   className="w-full h-auto object-cover"
@@ -181,7 +181,7 @@ export default function BookPage() {
             >
               <div className="space-y-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair">
-                  Who Is Jon Foard?
+                  Meet the Illustrator
                 </h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-third to-primary rounded-full"></div>
               </div>
@@ -191,7 +191,8 @@ export default function BookPage() {
                   Hi, I'm Jon, a Digital Illustrator from Derby, United Kingdom.
                   I live with my wife Beth, my two kids, Jonah and Margot and
                   our two cats, Edie and Mabel. I love to draw and create fun
-                  characters and places.
+                  characters and places. I've worked on several unique
+                  children's books and a few private commissions.
                 </p>
 
                 <p>
