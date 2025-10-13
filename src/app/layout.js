@@ -18,14 +18,14 @@ export const generateMetadata = async () => {
     title:
       "The Speech Heroes | Empowering Children with Speech & Language Delays",
     description:
-      "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice, and show them they are stronger than they think.",
+      "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with Speech and Language delays a voice, and show them they are stronger than they think.",
     icons: {
       icon: "/favicon.ico",
       shortcut: "/favicon.ico",
       apple: "/Aryan png.png",
     },
     keywords:
-      "speech and language delay, children's book, speech therapy, language development, superheroes, children's music, speech heroes, word stoppers, Aryan Kaushal, Rishi Kaushal, speech and language UK, children's resources, inclusive education",
+      "Speech and Language delay, children's book, speech therapy, language development, superheroes, children's music, speech heroes, word stoppers, Aryan Kaushal, Rishi Kaushal, Speech and Language UK, children's resources, inclusive education",
     authors: [{ name: "The Kaushal Family" }],
     creator: "Rishi Kaushal",
     publisher: "The Speech Heroes",
@@ -42,7 +42,7 @@ export const generateMetadata = async () => {
       title:
         "The Speech Heroes | Empowering Children with Speech & Language Delays",
       description:
-        "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice.",
+        "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with Speech and Language delays a voice.",
       url: "https://thespeechheroes.com", // Replace with your actual domain
       siteName: "The Speech Heroes",
       images: [
@@ -61,7 +61,7 @@ export const generateMetadata = async () => {
       title:
         "The Speech Heroes | Empowering Children with Speech & Language Delays",
       description:
-        "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice.",
+        "The Speech Heroes is a world where imagination meets real-life challenges. Songs, stories and characters that give children with Speech and Language delays a voice.",
       images: ["/Speech heroes png.png"], // Your hero image
     },
     robots: {
@@ -83,7 +83,7 @@ export const generateMetadata = async () => {
         "@type": "Organization",
         name: "The Speech Heroes",
         description:
-          "A world where imagination meets real-life challenges. Songs, stories and characters that give children with speech and language delays a voice.",
+          "A world where imagination meets real-life challenges. Songs, stories and characters that give children with Speech and Language delays a voice.",
         founder: {
           "@type": "Person",
           name: "Rishi Kaushal",

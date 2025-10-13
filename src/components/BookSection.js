@@ -63,14 +63,14 @@ export default function BookSection() {
             className="space-y-6"
           >
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-playfair">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-figtree">
                 Get the Book
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
             </div>
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
-              <p className="text-lg font-medium text-third">
+              <p className="text-emphasis text-third">
                 The Speech Heroes Vs. The Word Stoppers is now available!
               </p>
 
@@ -98,7 +98,7 @@ export default function BookSection() {
               </p>
 
               <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary">
-                <h3 className="text-lg font-bold text-black mb-3">Review:</h3>
+                <h3 className="text-emphasis text-black mb-3">Review:</h3>
                 <p className="text-gray-700 italic mb-4">
                   'The Speech Heroes' offers a thoughtful and unique portrayal
                   of the emotions and experiences of a young child with speech,
@@ -143,7 +143,7 @@ export default function BookSection() {
                 </svg>
               </a>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-small text-gray-500">
                 *Coming soon to Amazon - link will be added when live
               </p>
             </motion.div>

@@ -69,7 +69,7 @@ export default function ServicesSection() {
         <div
           className={`order-2 ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
         >
-          <h3 className="text-2xl md:text-3xl font-playfair text-black mb-6">
+          <h3 className="text-2xl md:text-3xl font-figtree text-black mb-6">
             {service.title}
           </h3>
           <p className="text-lg text-secondary leading-relaxed mb-6">
@@ -136,7 +136,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-figtree text-black mb-6">
             Services
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
@@ -153,7 +153,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-figtree text-black mb-6">
             Exercise Classes
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>

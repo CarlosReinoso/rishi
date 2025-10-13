@@ -61,7 +61,7 @@ export default function CharactersSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-playfair mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-figtree mb-4">
             Meet the Characters
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
@@ -127,7 +127,7 @@ export default function CharactersSection() {
                 </div>
 
                 <div className="relative z-10">
-                  <p className="text-gray-700 leading-relaxed text-center text-base group-hover:text-gray-800 transition-colors duration-300">
+                  <p className="text-gray-700 leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
                     {hero.description}
                   </p>
                 </div>
@@ -165,7 +165,7 @@ export default function CharactersSection() {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lead text-gray-600 max-w-2xl mx-auto">
               Mysterious, sneaky, and strong, the Word Stoppers live inside the
               mind, where they try to stop communication in its tracks. But
               every villain has a weakness...
@@ -223,11 +223,11 @@ export default function CharactersSection() {
                   <div className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-4 border-l-4 border-emerald-400 group-hover:shadow-md transition-shadow duration-300">
                     <div className="flex items-center mb-3">
                       <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
-                      <h5 className="text-sm font-bold text-emerald-700 font-figtree uppercase tracking-wide">
+                      <h5 className="text-small font-bold text-emerald-700 font-figtree uppercase tracking-wide">
                         Strength
                       </h5>
                     </div>
-                    <p className="text-sm text-gray-700 leading-relaxed pl-5">
+                    <p className="text-small text-gray-700 leading-relaxed pl-5">
                       {villain.strength}
                     </p>
                   </div>
@@ -236,11 +236,11 @@ export default function CharactersSection() {
                   <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl p-4 border-l-4 border-red-400 group-hover:shadow-md transition-shadow duration-300">
                     <div className="flex items-center mb-3">
                       <div className="w-2 h-2 bg-red-400 rounded-full mr-3 animate-pulse"></div>
-                      <h5 className="text-sm font-bold text-red-700 font-figtree uppercase tracking-wide">
+                      <h5 className="text-small font-bold text-red-700 font-figtree uppercase tracking-wide">
                         Weakness
                       </h5>
                     </div>
-                    <p className="text-sm text-gray-700 leading-relaxed pl-5">
+                    <p className="text-small text-gray-700 leading-relaxed pl-5">
                       {villain.weakness}
                     </p>
                   </div>
@@ -262,7 +262,7 @@ export default function CharactersSection() {
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-black font-playfair mb-4">
+            <h3 className="text-2xl font-bold text-black font-figtree mb-4">
               Ready to Join the Adventure?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">

@@ -53,7 +53,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-playfair text-black mb-6">
+                <h3 className="text-2xl font-figtree text-black mb-6">
                   Send a Message
                 </h3>
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-green-600 text-2xl">✓</span>
                     </div>
-                    <h4 className="text-xl font-playfair text-black mb-2">
+                    <h4 className="text-large font-figtree text-black mb-2">
                       Email Ready to Send!
                     </h4>
                     <p className="text-secondary">
@@ -140,17 +140,17 @@ export default function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl md:text-4xl font-playfair text-black mb-6">
+                <h2 className="text-3xl md:text-4xl font-figtree text-black mb-6">
                   Join the Speech Heroes Journey
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mb-8"></div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-lead text-gray-600 mb-6">
                   Whether you're interested in booking a school visit, have
                   questions about our book, or want to learn more about
-                  supporting children with speech and language delays, we'd love
+                  supporting children with Speech and Language delays, we'd love
                   to hear from you.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lead text-gray-600">
                   Fill in your details and message, and we'll respond as soon as
                   possible.
                 </p>
@@ -158,7 +158,7 @@ export default function ContactPage() {
 
               {/* Contact Details */}
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-xl font-playfair text-black mb-6">
+                <h3 className="text-xl font-figtree text-black mb-6">
                   Contact Information
                 </h3>
                 <div className="space-y-4">
@@ -197,31 +197,31 @@ export default function ContactPage() {
 
               {/* What We Offer */}
               <div className="bg-gradient-to-br from-third/10 to-primary/10 p-8 rounded-2xl border border-third/20">
-                <h3 className="text-xl font-playfair text-black mb-4">
+                <h3 className="text-xl font-figtree text-black mb-4">
                   What We Offer
                 </h3>
                 <p className="text-gray-600 mb-4">
                   We provide school visits, workshops, and resources to support
-                  children with speech and language delays.
+                  children with Speech and Language delays.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <div className="bg-white px-4 py-2 rounded-full shadow-sm">
-                    <span className="text-black font-medium text-sm">
+                    <span className="text-black font-medium text-small">
                       School Visits
                     </span>
                   </div>
                   <div className="bg-white px-4 py-2 rounded-full shadow-sm">
-                    <span className="text-black font-medium text-sm">
+                    <span className="text-black font-medium text-small">
                       Workshops
                     </span>
                   </div>
                   <div className="bg-white px-4 py-2 rounded-full shadow-sm">
-                    <span className="text-black font-medium text-sm">
+                    <span className="text-black font-medium text-small">
                       Children's Book
                     </span>
                   </div>
                   <div className="bg-white px-4 py-2 rounded-full shadow-sm">
-                    <span className="text-black font-medium text-sm">
+                    <span className="text-black font-medium text-small">
                       Music & Resources
                     </span>
                   </div>
@@ -242,7 +242,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-playfair text-black mb-6">
+            <h2 className="text-3xl md:text-4xl font-figtree text-black mb-6">
               What to Expect
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
@@ -266,7 +266,7 @@ export default function ContactPage() {
                 icon: "📚",
                 title: "Educational Resources",
                 description:
-                  "Books, music, and materials to support children with speech and language delays.",
+                  "Books, music, and materials to support children with Speech and Language delays.",
               },
             ].map((item, index) => (
               <motion.div
@@ -280,7 +280,7 @@ export default function ContactPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-third/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{item.icon}</span>
                 </div>
-                <h3 className="text-xl font-playfair text-black mb-3">
+                <h3 className="text-xl font-figtree text-black mb-3">
                   {item.title}
                 </h3>
                 <p className="text-secondary leading-relaxed">

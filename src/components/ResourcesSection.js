@@ -29,7 +29,7 @@ export default function ResourcesSection() {
     {
       title: "Speak to professionals",
       description:
-        "Contact your GP, health visitor, or school for a referral to a speech and language therapist.",
+        "Contact your GP, health visitor, or school for a referral to a Speech and Language therapist.",
     },
     {
       title: "Keep detailed notes",
@@ -54,7 +54,7 @@ export default function ResourcesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-playfair mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-figtree mb-4">
             Resources & Support
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
@@ -72,7 +72,7 @@ export default function ResourcesSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-black font-playfair mb-8 text-center lg:text-left">
+            <h3 className="text-2xl font-bold text-black font-figtree mb-8 text-center lg:text-left">
               Helpful Resources
             </h3>
 
@@ -135,7 +135,7 @@ export default function ResourcesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-black font-playfair mb-8 text-center lg:text-left">
+            <h3 className="text-2xl font-bold text-black font-figtree mb-8 text-center lg:text-left">
               If You're Concerned About a Child's Speech
             </h3>
 
@@ -169,7 +169,7 @@ export default function ResourcesSection() {
                 Need More Support?
               </h4>
               <p className="text-gray-600 mb-4">
-                We're here to help families navigate their speech and language
+                We're here to help families navigate their Speech and Language
                 journey.
               </p>
               <a

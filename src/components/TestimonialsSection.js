@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-figtree text-black mb-6">
             What Clients Say
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>

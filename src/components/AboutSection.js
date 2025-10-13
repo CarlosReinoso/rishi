@@ -17,14 +17,14 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-playfair">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-figtree">
                 About Us
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
             </div>
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
-              <p className="text-lg">
+              <p>
                 We're the Kaushal family — Rishi, Priya, and Aryan — a family on
                 a mission to raise awareness about Speech and Language delays in
                 children.
@@ -59,7 +59,7 @@ export default function AboutSection() {
                 spotlight the importance of communication for all children.
               </p>
 
-              <p className="text-lg font-medium">
+              <p>
                 Our hope is that The Speech Heroes brings comfort to families
                 like ours and reminds every child that their voice, in whatever
                 form, is powerful.
@@ -108,7 +108,7 @@ export default function AboutSection() {
                   <div className="absolute -top-2 left-0 w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
 
                   <div className="text-white space-y-2">
-                    <h3 className="text-2xl md:text-3xl font-bold font-playfair tracking-wide text-white">
+                    <h3 className="text-2xl md:text-3xl font-bold font-figtree tracking-wide text-white">
                       The Kaushal Family
                     </h3>
                     <div className="flex items-center space-x-2">

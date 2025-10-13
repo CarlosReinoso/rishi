@@ -44,7 +44,7 @@ export default function WhyChooseSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-figtree text-black mb-6">
             Why Choose Embody Perthshire?
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
@@ -66,7 +66,7 @@ export default function WhyChooseSection() {
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-playfair text-black mb-4 text-center flex-shrink-0">
+                <h3 className="text-xl font-figtree text-black mb-4 text-center flex-shrink-0">
                   {feature.title}
                 </h3>
                 <p className="text-secondary leading-relaxed text-center flex-grow">

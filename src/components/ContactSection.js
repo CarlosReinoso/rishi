@@ -14,7 +14,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-black mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-figtree text-black mb-6">
             Join the Speech Heroes Journey
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mx-auto mb-8"></div>
@@ -55,7 +55,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="mt-12 p-8 bg-white rounded-2xl shadow-lg"
         >
-          <h3 className="text-xl font-playfair text-black mb-4">Contact Us</h3>
+          <h3 className="text-xl font-figtree text-black mb-4">Contact Us</h3>
           <p className="text-gray-600 mb-6">
             For questions, bookings, or media inquiries, please get in touch
           </p>

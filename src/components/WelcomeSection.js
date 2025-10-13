@@ -175,7 +175,7 @@ export default function WelcomeSection() {
                 <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
                   heard
                 </span>
-                . Whether you are a parent, teacher, speech and language
+                . Whether you are a parent, teacher, Speech and Language
                 therapist, professional, or young reader, you are part of this
                 Speech Heroes team.
               </motion.p>

@@ -15,7 +15,7 @@ export default function BookPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black font-playfair mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black font-figtree mb-6">
               The Speech Heroes Vs. The Word Stoppers
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-fourth to-fifth rounded-full mx-auto mb-8"></div>
@@ -40,14 +40,14 @@ export default function BookPage() {
               className="space-y-6"
             >
               <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair">
+                <h2 className="text-3xl md:text-4xl font-bold text-black font-figtree">
                   Meet the Illustrator
                 </h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-third to-primary rounded-full"></div>
               </div>
 
               <div className="space-y-6 text-gray-700 leading-relaxed">
-                <p className="text-lg">
+                <p>
                   Hi, I'm Jon, a Digital Illustrator from Derby, United Kingdom.
                   I live with my wife Beth, my two kids, Jonah and Margot and
                   our two cats, Edie and Mabel. I love to draw and create fun
@@ -65,7 +65,7 @@ export default function BookPage() {
                 </p>
 
                 <div className="bg-white/60 rounded-xl p-6 border-l-4 border-third">
-                  <p className="text-lg font-medium text-black">
+                  <p className="text-emphasis text-black">
                     "I was really excited to work with Rishi and Aryan on the
                     Speech Heroes, it was a unique opportunity to work in a
                     comic book art style, drawing cool superheroes! But even
@@ -139,14 +139,14 @@ export default function BookPage() {
               className="space-y-6"
             >
               <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair">
+                <h2 className="text-3xl md:text-4xl font-bold text-black font-figtree">
                   Meet the Author
                 </h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
               </div>
 
               <div className="space-y-6 text-gray-700 leading-relaxed">
-                <p className="text-lg">
+                <p>
                   I am Rishi Kaushal, a dad whose biggest inspiration is my son
                   Aryan. Aryan battles with Developmental Language Disorder, and
                   our family has learnt that this journey is not a short one.
@@ -164,7 +164,7 @@ export default function BookPage() {
                 </p>
 
                 <div className="bg-white/60 rounded-xl p-6 border-l-4 border-primary">
-                  <p className="text-lg font-medium text-black">
+                  <p className="text-emphasis text-black">
                     "I wrote this book because I know how many children live
                     with Speech and Language difficulties, and how it can leave
                     families feeling unseen or isolated. This book is my way of
@@ -178,7 +178,7 @@ export default function BookPage() {
                   children everywhere believe in their own superpowers.
                 </p>
 
-                <p className="text-lg font-medium text-third">
+                <p className="text-emphasis text-third">
                   Looking ahead, my dream is for The Speech Heroes to grow into
                   more than just a book. I want it to become a leading space for
                   children's tools and resources. A place families, schools,
@@ -200,11 +200,11 @@ export default function BookPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-black font-figtree mb-6">
               Join the Adventure
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Help us spread awareness about speech and language delays and
+            <p className="text-lead text-gray-600 mb-8 max-w-2xl mx-auto">
+              Help us spread awareness about Speech and Language delays and
               support children in finding their voice. Every purchase helps us
               reach more families.
             </p>

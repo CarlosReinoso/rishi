@@ -12,13 +12,13 @@ export default function WorkshopsSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-playfair mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-figtree mb-4">
               School Visits and Workshops
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-third to-primary rounded-full mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lead text-gray-600 max-w-3xl mx-auto">
               We offer interactive visits and workshops for schools and groups
-              to help children learn about speech and language delays in a fun
+              to help children learn about Speech and Language delays in a fun
               and supportive way.
             </p>
           </motion.div>
@@ -34,13 +34,13 @@ export default function WorkshopsSection() {
             className="space-y-6"
           >
             <div className="space-y-6 text-gray-700 leading-relaxed">
-              <p className="text-lg">
+              <p>
                 Our sessions include storytelling, superhero activities, and
                 ways to unlock children's communication superpowers.
               </p>
 
               <div className="bg-white/60 rounded-xl p-6 border-l-4 border-third">
-                <h3 className="text-lg font-bold text-black font-playfair mb-4">
+                <h3 className="text-emphasis text-black font-figtree mb-4">
                   What We Offer:
                 </h3>
                 <ul className="space-y-3">
@@ -50,7 +50,7 @@ export default function WorkshopsSection() {
                       <h6 className="font-semibold text-black font-figtree">
                         Interactive Storytelling
                       </h6>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-small text-gray-600">
                         Bring The Speech Heroes characters to life through
                         engaging stories
                       </p>
@@ -62,7 +62,7 @@ export default function WorkshopsSection() {
                       <h6 className="font-semibold text-black font-figtree">
                         Superhero Activities
                       </h6>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-small text-gray-600">
                         Fun games and exercises that promote communication
                         skills
                       </p>
@@ -74,7 +74,7 @@ export default function WorkshopsSection() {
                       <h6 className="font-semibold text-black font-figtree">
                         Communication Tools
                       </h6>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-small text-gray-600">
                         Practical strategies to help children find their voice
                       </p>
                     </div>
@@ -85,7 +85,7 @@ export default function WorkshopsSection() {
                       <h6 className="font-semibold text-black font-figtree">
                         Music & Movement
                       </h6>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-small text-gray-600">
                         Inclusive activities that celebrate all forms of
                         expression
                       </p>
@@ -95,10 +95,10 @@ export default function WorkshopsSection() {
               </div>
 
               <div className="bg-gradient-to-r from-fourth/20 to-fifth/20 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-black font-playfair mb-3">
+                <h3 className="text-emphasis text-black font-figtree mb-3">
                   Perfect For:
                 </h3>
-                <div className="grid sm:grid-cols-2 gap-4 text-sm">
+                <div className="grid sm:grid-cols-2 gap-4 text-small">
                   <div className="flex items-center">
                     <span className="text-fourth mr-2">🏫</span>
                     Primary Schools
@@ -118,7 +118,7 @@ export default function WorkshopsSection() {
                 </div>
               </div>
 
-              <p className="text-lg font-medium text-third">
+              <p className="text-emphasis text-third">
                 Contact us to book a visit or to discuss how we can support your
                 school.
               </p>
@@ -162,54 +162,45 @@ export default function WorkshopsSection() {
             className="relative"
           >
             <div className="bg-white/60 rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-black font-playfair mb-6 text-center">
+              <h3 className="text-2xl font-bold text-black font-figtree mb-6 text-center">
                 Workshop Highlights
               </h3>
 
               <div className="space-y-6">
-                <motion.div
-                  
-                  className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-4"
-                >
+                <motion.div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-4">
                   <div className="flex items-center mb-2">
                     <span className="text-2xl mr-3">🎭</span>
                     <h6 className="font-bold text-black font-figtree">
                       Character Role Play
                     </h6>
                   </div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-small text-gray-600">
                     Children become Speech Heroes and learn to overcome Word
                     Stoppers
                   </p>
                 </motion.div>
 
-                <motion.div
-                
-                  className="bg-gradient-to-r from-fourth/20 to-fifth/20 rounded-lg p-4"
-                >
+                <motion.div className="bg-gradient-to-r from-fourth/20 to-fifth/20 rounded-lg p-4">
                   <div className="flex items-center mb-2">
                     <span className="text-2xl mr-3">🎵</span>
                     <h6 className="font-bold text-black font-figtree">
                       Music & Movement
                     </h6>
                   </div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-small text-gray-600">
                     Sing along with our songs and discover rhythm as a
                     communication tool
                   </p>
                 </motion.div>
 
-                <motion.div
-                 
-                  className="bg-gradient-to-r from-third/20 to-primary/20 rounded-lg p-4"
-                >
+                <motion.div className="bg-gradient-to-r from-third/20 to-primary/20 rounded-lg p-4">
                   <div className="flex items-center mb-2">
                     <span className="text-2xl mr-3">🦸</span>
                     <h6 className="font-bold text-black font-figtree">
                       Superpower Discovery
                     </h6>
                   </div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-small text-gray-600">
                     Help children identify and celebrate their unique
                     communication strengths
                   </p>

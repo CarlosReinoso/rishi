@@ -17,7 +17,7 @@ export default function MusicSection() {
             className="space-y-6"
           >
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-playfair">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-figtree">
                 Our Music Project - Speech Bound
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-fourth to-fifth rounded-full"></div>

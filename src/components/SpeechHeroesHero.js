@@ -195,7 +195,7 @@ export default function SpeechHeroesHero() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="mb-6"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-playfair mb-4 leading-tight drop-shadow-2xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-figtree mb-4 leading-tight drop-shadow-2xl">
                 The Speech Heroes
               </h1>
               <motion.div

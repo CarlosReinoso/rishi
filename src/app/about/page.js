@@ -15,11 +15,11 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black font-playfair mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black font-figtree mb-6">
               About The Speech Heroes
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lead text-gray-600 max-w-3xl mx-auto">
               A family's journey from challenge to hope, creating a world where
               every child's voice matters
             </p>
@@ -39,12 +39,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-black font-figtree mb-8">
                 Our Story
               </h2>
 
               <div className="space-y-6 text-gray-700 leading-relaxed">
-                <p className="text-lg">
+                <p>
                   We're the Kaushal family — Rishi, Priya, and Aryan — a family
                   on a mission to raise awareness about Speech and Language
                   delays in children.
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 </p>
 
                 <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary my-8">
-                  <p className="text-lg font-medium text-black italic">
+                  <p className="text-emphasis text-black italic">
                     "A world of story, song, and Superheroes built on empathy
                     and expression."
                   </p>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                   children.
                 </p>
 
-                <p className="text-lg font-medium text-third">
+                <p>
                   Our hope is that The Speech Heroes brings comfort to families
                   like ours and reminds every child that their voice, in
                   whatever form, is powerful.
@@ -113,7 +113,7 @@ export default function AboutPage() {
                     <div className="absolute -top-2 left-0 w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
 
                     <div className="text-white space-y-2">
-                      <h3 className="text-2xl md:text-3xl font-bold font-playfair tracking-wide text-white">
+                      <h3 className="text-2xl md:text-3xl font-bold font-figtree tracking-wide text-white">
                         The Kaushal Family
                       </h3>
                       <div className="flex items-center space-x-2">
@@ -169,23 +169,23 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair mb-8 mt-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-black font-figtree mb-8 mt-16">
                 Our Mission
               </h2>
 
               <div className="bg-gradient-to-br from-fourth/10 to-fifth/10 rounded-2xl p-8">
-                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-lead text-gray-700 mb-6">
                   The Speech Heroes is a world where imagination meets real-life
                   challenges. Inspired by our own journey as a family, we
                   created songs, stories and characters that give children with
-                  speech and language delays a voice, and show them they are
+                  Speech and Language delays a voice, and show them they are
                   stronger than they think.
                 </p>
 
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lead text-gray-600">
                   Here, every adventure is about courage, connection, and
                   finding ways to be heard. Whether you are a parent, teacher,
-                  speech and language therapist, professional, or young reader,
+                  Speech and Language therapist, professional, or young reader,
                   you are part of this superhero team.
                 </p>
               </div>
@@ -199,7 +199,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-black font-playfair mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-black font-figtree mb-8">
                 Our Values
               </h2>
 
