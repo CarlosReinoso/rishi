@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/config/supabase";
+import { createClient } from "@supabase/supabase-js";
 
 export async function POST(request) {
   try {
@@ -11,6 +11,20 @@ export async function POST(request) {
         { status: 400 }
       );
     }
+
+    // Create a Supabase client for server-side operations
+    // Use service role key if available (bypasses RLS), otherwise use anon key
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey =
+      process.env.SUPABASE_SERVICE_ROLE_KEY ||
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    const supabase = createClient(supabaseUrl, supabaseKey, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false,
+      },
+    });
 
     // Insert email into newsletter_subscribers table
     const { data, error } = await supabase
