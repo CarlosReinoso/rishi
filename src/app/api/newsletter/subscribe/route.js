@@ -64,6 +64,38 @@ export async function POST(request) {
     // Normalize email to lowercase
     const subscriberEmail = trimmedEmail.toLowerCase();
 
+    // Check if email already exists in the database
+    const { data: existingSubscriber, error: checkError } = await supabase
+      .from("newsletter_subscribers")
+      .select("email")
+      .eq("email", subscriberEmail)
+      .single();
+
+    if (checkError && checkError.code !== "PGRST116") {
+      // PGRST116 is "not found" error, which is expected for new emails
+      // Any other error means there's a problem
+      console.error("Error checking for duplicate email:", checkError);
+      if (checkError.message && checkError.message.includes("fetch")) {
+        return NextResponse.json(
+          { error: "Database connection error. Please try again later." },
+          { status: 503 }
+        );
+      }
+      throw checkError;
+    }
+
+    // If email already exists, return friendly message
+    if (existingSubscriber) {
+      return NextResponse.json(
+        {
+          error:
+            "This email is already subscribed to our newsletter. Thank you for your interest!",
+          alreadySubscribed: true,
+        },
+        { status: 409 }
+      );
+    }
+
     // Insert email into newsletter_subscribers table
     const { data, error } = await supabase
       .from("newsletter_subscribers")
@@ -73,10 +105,14 @@ export async function POST(request) {
 
     if (error) {
       console.error("Supabase error:", error);
-      // Check if it's a duplicate email error
+      // Check if it's a duplicate email error (fallback in case of race condition)
       if (error.code === "23505") {
         return NextResponse.json(
-          { error: "This email is already subscribed" },
+          {
+            error:
+              "This email is already subscribed to our newsletter. Thank you for your interest!",
+            alreadySubscribed: true,
+          },
           { status: 409 }
         );
       }

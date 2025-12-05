@@ -9,11 +9,13 @@ export default function NewsletterPage() {
   const [email, setEmail] = useState("");
   const [submitStatus, setSubmitStatus] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setErrorMessage("");
 
     try {
       const response = await fetch("/api/newsletter/subscribe", {
@@ -31,10 +33,12 @@ export default function NewsletterPage() {
         setEmail("");
       } else {
         setSubmitStatus("error");
+        setErrorMessage(data.error || "Something went wrong. Please try again.");
         console.error("Error:", data.error);
       }
     } catch (error) {
       setSubmitStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
       console.error("Error:", error);
     } finally {
       setIsSubmitting(false);
@@ -196,11 +200,22 @@ export default function NewsletterPage() {
                       />
                     </div>
 
-                    {submitStatus === "error" && (
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                        <p className="text-red-600 text-sm">
-                          Something went wrong. Please try again or contact us
-                          directly.
+                    {submitStatus === "error" && errorMessage && (
+                      <div
+                        className={`rounded-lg p-4 ${
+                          errorMessage.includes("already subscribed")
+                            ? "bg-blue-50 border border-blue-200"
+                            : "bg-red-50 border border-red-200"
+                        }`}
+                      >
+                        <p
+                          className={`text-sm ${
+                            errorMessage.includes("already subscribed")
+                              ? "text-blue-700"
+                              : "text-red-600"
+                          }`}
+                        >
+                          {errorMessage}
                         </p>
                       </div>
                     )}
