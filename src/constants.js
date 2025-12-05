@@ -14,6 +14,10 @@ export const NAV_ITEMS = [
     label: "Get the Book",
   },
   {
+    href: "/newsletter",
+    label: "Newsletter",
+  },
+  {
     href: "/contact",
     label: "Contact Us",
   },
