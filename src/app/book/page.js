@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import BookSection from "@/components/BookSection";
+import { AMAZON_BOOK_URL } from "@/constants";
 
 export default function BookPage() {
   return (
@@ -210,10 +211,12 @@ export default function BookPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#"
+                href={AMAZON_BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:from-secondary hover:to-third transition-all duration-300 transform hover:scale-105"
               >
-                Pre-order Now
+                Buy on Amazon
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"

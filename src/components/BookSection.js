@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { AMAZON_BOOK_URL } from "@/constants";
 
 export default function BookSection() {
   return (
@@ -124,10 +125,12 @@ export default function BookSection() {
               className="pt-4 space-y-4"
             >
               <a
-                href="#"
+                href={AMAZON_BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:from-secondary hover:to-third transition-all duration-300 transform hover:scale-105 text-lg"
               >
-                Get Your Copy Today
+                Buy on Amazon
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"
@@ -144,7 +147,7 @@ export default function BookSection() {
               </a>
 
               <p className="text-small text-gray-500">
-                *Coming soon to Amazon - link will be added when live
+                Opens Amazon.co.uk in a new tab.
               </p>
             </motion.div>
           </motion.div>
