@@ -14,9 +14,13 @@ export default function WelcomeSection() {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
             Welcome to The Speech Heroes
           </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+            The world&apos;s first superhero brand for children with speech and
+            language challenges.
+          </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
@@ -126,13 +130,9 @@ export default function WelcomeSection() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                Every child and every parent is a{" "}
-                <span className="font-semibold text-blue-600">Superhero</span>{" "}
-                in their own way. Sometimes our powers are{" "}
-                <span className="font-semibold text-blue-600">loud</span>,
-                sometimes they are{" "}
-                <span className="font-semibold text-purple-600">quiet</span> but
-                they are always there, waiting to be{" "}
+                Every child has a superpower. Sometimes it shines loudly,
+                sometimes it shines quietly but it is always there, just
+                waiting to be{" "}
                 <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
                   unlocked
                 </span>
@@ -145,19 +145,18 @@ export default function WelcomeSection() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 viewport={{ once: true }}
               >
-                The Speech Heroes is a world where{" "}
-                <span className="font-semibold text-blue-600">imagination</span>{" "}
-                meets{" "}
+                The Speech Heroes was created for the{" "}
+                <span className="font-semibold text-blue-600">
+                  2 million families
+                </span>{" "}
+                across the UK who are navigating the world of speech and language
+                challenges. Through superheroes, stories and songs, we give every
+                child a hero they can truly see themselves in. A hero who faces
+                the same challenges they do and{" "}
                 <span className="font-semibold text-purple-600">
-                  real-life challenges
+                  rises above them
                 </span>
-                . Inspired by our own journey as a family, we have created
-                songs, stories and characters that give children with Speech and
-                Language delays a{" "}
-                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">
-                  voice
-                </span>
-                , and show them they are stronger than they think.
+                .
               </motion.p>
 
               <motion.p
@@ -166,22 +165,91 @@ export default function WelcomeSection() {
                 transition={{ duration: 0.6, delay: 1.0 }}
                 viewport={{ once: true }}
               >
-                Here, every adventure is about{" "}
+                This is a place where every adventure is built on{" "}
                 <span className="font-semibold text-blue-600">courage</span>,{" "}
-                <span className="font-semibold text-purple-600">
-                  connection
-                </span>
-                , and finding ways to be{" "}
+                <span className="font-semibold text-purple-600">connection</span>{" "}
+                and the belief that every child deserves to be{" "}
                 <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
                   heard
                 </span>
-                . Whether you are a parent, teacher, Speech and Language
-                therapist, professional, or young reader, you are part of this
-                Speech Heroes team.
+                , in whatever way they communicate best.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+                viewport={{ once: true }}
+              >
+                Whether you are a parent searching for{" "}
+                <span className="font-semibold text-blue-600">support</span>, a
+                teacher looking for the right tools, a speech and language
+                therapist or a young reader ready for{" "}
+                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
+                  adventure
+                </span>
+                ,{" "}
+                <span className="font-semibold text-purple-600">
+                  you belong here
+                </span>
+                .
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.4 }}
+                viewport={{ once: true }}
+                className="font-semibold text-gray-800"
+              >
+                You are part of the{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  Speech Heroes team
+                </span>
+                .
               </motion.p>
             </motion.div>
           </div>
         </div>
+
+        {/* Coming Soon */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto mt-16 md:mt-20 text-center"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+            Coming Soon
+          </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-8"></div>
+          <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-700">
+            <p>
+              The Speech Heroes universe is growing. We are currently exploring
+              the world of{" "}
+              <span className="font-semibold text-blue-600">animation</span>,
+              bringing our beloved characters to life on screen in a way that
+              will{" "}
+              <span className="font-semibold text-purple-600">connect</span> with
+              children and families like never before. Watch this space. The
+              adventure is{" "}
+              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+                only just beginning
+              </span>
+              .
+            </p>
+            <p className="font-semibold text-gray-800">
+              No family should ever feel{" "}
+              <span className="text-blue-600">alone</span> on this journey. And
+              with The Speech Heroes by your side, you{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
+                never will
+              </span>
+              .
+            </p>
+          </div>
+        </motion.div>
 
         {/* Decorative Elements */}
         <motion.div
