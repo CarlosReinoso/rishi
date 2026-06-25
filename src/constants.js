@@ -17,6 +17,14 @@ export const NAV_ITEMS = [
     label: "Get the Book",
   },
   {
+    href: "/media",
+    label: "In the Media",
+  },
+  {
+    href: "/faq",
+    label: "FAQ",
+  },
+  {
     href: "/newsletter",
     label: "Newsletter",
   },

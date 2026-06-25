@@ -2,27 +2,19 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import BookSection from "@/components/BookSection";
+import SectionHero from "@/components/SectionHero";
 import { AMAZON_BOOK_URL } from "@/constants";
 
 export default function BookPage() {
   return (
     <div className="bg-white text-black">
-      {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-gradient-to-br from-fourth/20 to-fifth/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black font-figtree mb-6">
-              The Speech Heroes Vs. The Word Stoppers
-            </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-fourth to-fifth rounded-full mx-auto mb-8"></div>
-          </motion.div>
-        </div>
-      </section>
+      <SectionHero
+        title="The Speech Heroes Vs. The Word Stoppers"
+        accentFrom="from-fourth"
+        accentTo="to-fifth"
+        large
+        animated
+      />
 
       {/* Book Details Section */}
 
