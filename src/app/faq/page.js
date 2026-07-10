@@ -5,12 +5,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionHero from "@/components/SectionHero";
 
 const resourceHandouts = [
-  "Creating Opportunities to Communicate",
-  "DLD Advice",
-  "CAS Advice",
-  "AAC Handout",
-  "Stammering Handout",
-  "Autism Communication Resources",
+  {
+    title: "Creating Opportunities to Communicate",
+    url: "/resources/sh-creating-opportunities-to-communicate.pdf",
+  },
+  {
+    title: "DLD Advice",
+    url: "/resources/sh-about-dld.pdf",
+  },
+  {
+    title: "CAS Advice",
+    url: "/resources/sh-about-cas.pdf",
+  },
+  {
+    title: "AAC Handout",
+    url: "/resources/sh-aac-handout.pdf",
+  },
+  {
+    title: "Stammering Handout",
+    url: "/resources/sh-stammering-handout.pdf",
+  },
+  {
+    title: "Autism Communication Resources",
+    url: "/resources/sh-autism-info.pdf",
+  },
 ];
 
 const faqItems = [
@@ -436,18 +454,25 @@ export default function FaqPage() {
           </motion.div>
 
           <ul className="grid sm:grid-cols-2 gap-4">
-            {resourceHandouts.map((title, index) => (
+            {resourceHandouts.map((handout, index) => (
               <motion.li
-                key={title}
+                key={handout.title}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
               >
-                <div className="h-full flex items-center gap-3 rounded-xl border border-white bg-white/80 px-5 py-4 shadow-sm">
+                <a
+                  href={handout.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-full flex items-center gap-3 rounded-xl border border-white bg-white/80 px-5 py-4 shadow-sm hover:border-third/30 hover:bg-white hover:shadow-md transition-all group"
+                >
                   <span className="flex-shrink-0 w-2 h-2 rounded-full bg-third" />
-                  <span className="font-figtree text-gray-800">{title}</span>
-                </div>
+                  <span className="font-figtree text-gray-800 group-hover:text-third transition-colors">
+                    {handout.title}
+                  </span>
+                </a>
               </motion.li>
             ))}
           </ul>

@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { getAryanAgeText } from "@/utils/ageCalculator";
 
 export default function AboutSection() {
   return (
@@ -25,38 +24,44 @@ export default function AboutSection() {
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p>
-                We're the Kaushal family — Rishi, Priya, and Aryan — a family on
-                a mission to raise awareness about Speech and Language delays in
-                children.
+                We&apos;re the Kaushal family...Rishi, Priya and Aryan.
               </p>
 
               <p>
-                Our journey began when Aryan, now {getAryanAgeText()}, was
-                diagnosed with a Speech and Language delay in particular
-                Developmental Language Delay. Like many families, we faced the
-                worry and uncertainty of navigating a world not always built to
-                understand children who communicate differently.
+                A family on a mission to raise awareness about Speech and
+                Language challenges in children.
+              </p>
+
+              <p>
+                Our journey began when Aryan, now 6 years old, was diagnosed
+                with a Speech and Language challenge. Like many families, we
+                faced the worry and uncertainty of navigating a world not always
+                built to understand children who communicate differently.
               </p>
 
               <p>
                 With limited support available rather than feeling alone, we
-                chose to turn our experience into something creative and
-                hopeful. Last year with Rishi's imagination, Priya's steady
-                support, and Aryan's determination,{" "}
+                chose to turn our experience into something creative and hopeful.
+                Last year with Rishi&apos;s imagination, Priya&apos;s steady
+                support, and Aryan&apos;s determination,{" "}
                 <strong>The Speech Heroes were born!</strong>
               </p>
 
               <p className="text-lg font-medium text-third">
-                A world of story, song, and Superheroes built on empathy and
-                expression.
+                &ldquo;A world of story, song, and Superheroes built on empathy
+                and expression.&rdquo;
               </p>
 
               <p>
                 Priya has been a constant source of encouragement behind the
-                scenes, and care to every step of the journey. Rishi, a creative
-                advocate and runner who has long raised awareness on issues like
-                Domestic Abuse and Homelessness, now uses his energy to
-                spotlight the importance of communication for all children.
+                scenes, and care to every step of the journey.
+              </p>
+
+              <p>
+                Rishi, a creative advocate and runner who has long raised
+                awareness on issues like Domestic Abuse and Homelessness, now
+                uses his energy to spotlight the importance of communication
+                for all children.
               </p>
 
               <p>
