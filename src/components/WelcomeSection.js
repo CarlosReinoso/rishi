@@ -37,7 +37,7 @@ export default function WelcomeSection() {
             >
               <div className="relative w-80 h-80 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer">
                 <Image
-                  src="/father-and-son.jpeg"
+                  src="/father-and-son.jpg"
                   alt="Father and son - The Speech Heroes family journey"
                   width={400}
                   height={400}

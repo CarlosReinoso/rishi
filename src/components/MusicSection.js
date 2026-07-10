@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { YOUTUBE_VIDEO } from "@/constants";
 
@@ -18,78 +17,91 @@ export default function MusicSection() {
           >
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black font-figtree">
-                Our Music Project - Speech Bound
+                Our Music Project – Speech Bound
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-fourth to-fifth rounded-full"></div>
             </div>
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
-              <p className="text-lg">
-                Last year something clicked for Aryan after his first term at
-                school where he had been learning phonics; he discovered a love
-                for music, rhythm, and even beatboxing.
+              <p>
+                When Aryan was diagnosed with a speech and language challenge,
+                communication became one of the biggest obstacles our family had
+                ever faced. He struggled to understand words, express himself
+                and make sense of language.
+              </p>
+
+              <p>As a dad, Rishi was determined to find a way to reach him.</p>
+
+              <p>
+                One thing stood out above everything else: music. Aryan would
+                light up whenever he heard a beat. Rishi realised that while
+                spoken words were difficult, music seemed to unlock something
+                special.
               </p>
 
               <p>
-                One evening in their living room, Rishi noticed that Aryan
-                connected to music and enjoyed singing, he turned to Priya and
-                said, "It's time to make a song."
+                One evening at home, he turned to Priya and said, &ldquo;I&apos;m
+                going to write a rap song.&rdquo;
               </p>
 
               <p>
-                What started as a wild idea slowly spiralled into something
-                real. With no prior music experience, Rishi and Aryan took
-                several weeks to write lyrics for their song, continuing to
-                practice each night until it was perfect. With help from their
-                trusted friend Ranjit they recorded the track using a kids'
-                headset, a rode mic, and basic recording software.
+                Despite having no music experience, Rishi spent weeks writing
+                lyrics inspired by Aryan&apos;s journey, practicing them
+                together every night.
+              </p>
+
+              <p className="text-lg font-medium text-black">
+                Then something incredible happened.
               </p>
 
               <p>
-                From there, they dreamed even bigger; creating a full script for
-                a children's music video with absolutely zero budget. Every
-                scene was built from Rishi's imagination, determination, and the
-                belief that a message about Speech and Language delay could be
-                powerful, fun, and full of heart.
+                Aryan started repeating the words back. For a child who
+                struggled to communicate, hearing him say the lyrics was an
+                emotional breakthrough. Music had become more than entertainment,
+                it had become a bridge to communication, giving Aryan the
+                confidence to say words he had previously found difficult.
+              </p>
+
+              <p>
+                Seeing this progress convinced Rishi that the song needed to be
+                shared with other families. With the support of their close
+                friend, Ranjit, they recorded Speech Bound using a children&apos;s
+                gaming headset, a Rode microphone and basic recording software.
+              </p>
+
+              <p>
+                The dream quickly grew bigger. With no budget, they created a
+                children&apos;s music video entirely from Rishi&apos;s
+                imagination, determination and belief that a story about speech
+                and language challenges could be powerful, uplifting and fun.
               </p>
 
               <div className="bg-white/60 rounded-xl p-6 border-l-4 border-fourth">
                 <p className="text-lg font-medium text-black">
-                  Speech Bound reflects Aryan's struggles and Rishi's
-                  encouragement as a dad. It was released on World Voice Day. As
-                  part of this project, they launched a fundraiser for Speech
-                  and Language UK, setting out to raise £5,000 to support the 2
-                  million children in the UK affected by Speech and Language
-                  delays.
+                  Speech Bound tells the story of a child finding their voice
+                  through the encouragement of a parent who never gives up. It
+                  was released on World Voice Day, alongside a fundraiser for
+                  Speech and Language UK, with the goal of raising £5,000 to
+                  support the 2 million children in the UK who experience speech
+                  and language challenges.
                 </p>
               </div>
 
               <p>
-                The song has since led to radio features on BBC Radio WM with
-                Mya Khan and featured on a number of podcasts and live shows.
-                Rishi and Aryan have been touring Youth Festivals and performed
-                in front of hundreds of people.
+                Since its release, Speech Bound has gained national attention,
+                featuring on BBC Radio WM with Mya Khan, multiple podcasts, radio
+                stations and live events. The project has taken Rishi and Aryan
+                to festivals across the UK, with their biggest performance on the
+                main stage, so far at Soul Revolution Festival 2026, where they
+                performed Speech Bound in front of hundreds of people and inspired
+                families with their story.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-white/60 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-fourth">£2000</div>
-                  <div className="text-sm text-gray-600">raised to date</div>
-                </div>
-                <div className="bg-white/60 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-fourth">
-                    BBC Radio
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    Featured on WM & Unity FM
-                  </div>
-                </div>
-              </div>
-
               <p className="text-lg font-medium text-third">
-                Speech Bound has become a rallying call for awareness,
-                inclusion, and creative expression for all children who find it
-                hard to be heard.
+                What began as one father&apos;s attempt to help his son
+                communicate became the spark that inspired The Speech Heroes, a
+                growing universe of stories, characters and creativity designed
+                to help children find their voice.
               </p>
             </div>
 

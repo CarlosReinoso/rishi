@@ -113,7 +113,7 @@ export default function BookPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/rishi.png"
+                  src="/author.jpeg"
                   alt="Rishi Kaushal - Author"
                   width={500}
                   height={600}

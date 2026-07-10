@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { getAryanAgeText } from "@/utils/ageCalculator";
 
 export default function AboutPage() {
   return (
@@ -45,41 +44,47 @@ export default function AboutPage() {
 
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p>
-                  We're the Kaushal family — Rishi, Priya, and Aryan — a family
-                  on a mission to raise awareness about Speech and Language
-                  delays in children.
+                  We&apos;re the Kaushal family...Rishi, Priya and Aryan.
                 </p>
 
                 <p>
-                  Our journey began when Aryan, now {getAryanAgeText()}, was
-                  diagnosed with a Speech and Language delay in particular
-                  Developmental Language Delay. Like many families, we faced the
-                  worry and uncertainty of navigating a world not always built
-                  to understand children who communicate differently.
+                  A family on a mission to raise awareness about Speech and
+                  Language challenges in children.
+                </p>
+
+                <p>
+                  Our journey began when Aryan, now 6 years old, was diagnosed
+                  with a Speech and Language challenge. Like many families, we
+                  faced the worry and uncertainty of navigating a world not
+                  always built to understand children who communicate
+                  differently.
                 </p>
 
                 <p>
                   With limited support available rather than feeling alone, we
                   chose to turn our experience into something creative and
-                  hopeful. Last year with Rishi's imagination, Priya's steady
-                  support, and Aryan's determination,{" "}
-                  <strong>The Speech Heroes were born!</strong>
+                  hopeful. Last year with Rishi&apos;s imagination, Priya&apos;s
+                  steady support, and Aryan&apos;s determination, The Speech
+                  Heroes were born!
                 </p>
 
                 <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary my-8">
                   <p className="text-emphasis text-black italic">
-                    "A world of story, song, and Superheroes built on empathy
-                    and expression."
+                    &ldquo;A world of story, song, and Superheroes built on
+                    empathy and expression.&rdquo;
                   </p>
                 </div>
 
                 <p>
                   Priya has been a constant source of encouragement behind the
-                  scenes, and care to every step of the journey. Rishi, a
-                  creative advocate and runner who has long raised awareness on
-                  issues like Domestic Abuse and Homelessness, now uses his
-                  energy to spotlight the importance of communication for all
-                  children.
+                  scenes, and care to every step of the journey.
+                </p>
+
+                <p>
+                  Rishi, a creative advocate and runner who has long raised
+                  awareness on issues like Domestic Abuse and Homelessness, now
+                  uses his energy to spotlight the importance of communication
+                  for all children.
                 </p>
 
                 <p>
@@ -100,8 +105,8 @@ export default function AboutPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Family Pic.jpg"
-                  alt="The Kaushal Family - Rishi, Priya, and Aryan"
+                  src="/father-and-son-headshot.jpg"
+                  alt="Father and Son - Rishi and Aryan"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
@@ -114,12 +119,12 @@ export default function AboutPage() {
 
                     <div className="text-white space-y-2">
                       <h3 className="text-2xl md:text-3xl font-bold font-figtree tracking-wide text-white">
-                        The Kaushal Family
+                      Father and Son
                       </h3>
                       <div className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-fourth rounded-full"></div>
                         <p className="text-base font-medium text-primary/90 tracking-wide">
-                          Rishi, Priya, and Aryan
+                        Rishi and Aryan
                         </p>
                         <div className="w-2 h-2 bg-fourth rounded-full"></div>
                       </div>
