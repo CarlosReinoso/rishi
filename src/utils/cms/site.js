@@ -3,6 +3,8 @@ const LIVE_BRANCH = process.env.CMS_LIVE_BRANCH || "master";
 const DRAFT_BRANCH = "draft";
 const PUBLISH_PREFIX = "Publish: ";
 const MAX_TEXT_LENGTH = 5000;
+const PREVIEW_WAIT_MS = 50000;
+const PREVIEW_POLL_MS = 5000;
 
 export const EDITABLE_FILES = {
   "src/components/SpeechHeroesHero.js": "Home: top banner",
@@ -217,6 +219,17 @@ export async function getDraft() {
     pages: comparison.files.map((item) => labelFor(item.filename)),
     preview: await getPreview(sha),
   };
+}
+
+// Stays under the 60 second function limit; callers ask again if it's still building.
+export async function waitForDraft() {
+  const deadline = Date.now() + PREVIEW_WAIT_MS;
+  let draft = await getDraft();
+  while (draft?.preview.state === "building" && Date.now() < deadline) {
+    await new Promise((resolve) => setTimeout(resolve, PREVIEW_POLL_MS));
+    draft = await getDraft();
+  }
+  return draft;
 }
 
 export async function publishDraft(summary) {
