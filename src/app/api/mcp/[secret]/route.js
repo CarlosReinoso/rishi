@@ -3,20 +3,36 @@ import {
   changeText,
   CmsError,
   findText,
-  getDraft,
   listPages,
   readPage,
+  waitForDraft,
 } from "@/utils/cms/site";
 import { safeEqual } from "@/utils/cms/session";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 const PROTOCOL_VERSIONS = ["2025-11-25", "2025-06-18", "2025-03-26"];
+const EDITOR_URL = "https://thespeechheroes.com/editor";
 
 const INSTRUCTIONS = `You help the owner of The Speech Heroes website change its wording. They are not technical, so never show them code or file paths.
 Find the wording with find_text, read the page, then use change_text and change only words inside the existing text. Keep quotes and surrounding code exactly as they are.
-Changes are saved to a private draft. After changing something, call draft_status and share the preview link when it is ready (it takes about a minute).
-You cannot make changes live. Tell them to press Publish on the website's /editor page when they are happy, where they can also undo past changes.`;
+Changes are saved to a private draft. When making several changes, set more_changes to true on all but the last one.
+Always end by giving them the preview link as a clickable link. If the preview is still building, call draft_status again until you have the link or it has failed (it takes about a minute).
+You cannot make changes live. Tell them to press Publish at ${EDITOR_URL} when they are happy, where they can also undo past changes.`;
+
+function describeDraft(draft) {
+  if (!draft) return "There are no changes waiting.";
+
+  const waiting = draft.changes.map((change) => `- ${change}`).join("\n");
+  if (draft.preview.state === "ready") {
+    return `Preview ready: ${draft.preview.url}\n\nWaiting to go live:\n${waiting}\n\nPublish at ${EDITOR_URL}`;
+  }
+  if (draft.preview.state === "failed") {
+    return `The preview failed to build, so this can't be published yet. Check the last change, or discard the draft at ${EDITOR_URL}.\n\nWaiting to go live:\n${waiting}`;
+  }
+  return `Saved. The preview is still building, so call draft_status again to get the link.\n\nWaiting to go live:\n${waiting}`;
+}
 
 const TOOLS = [
   {
@@ -50,7 +66,7 @@ const TOOLS = [
   },
   {
     name: "change_text",
-    description: "Replace exact wording on one page. Saved to the draft, not the live site.",
+    description: "Replace exact wording on one page. Saved to the draft, not the live site. Waits for the preview and returns its link.",
     inputSchema: {
       type: "object",
       properties: {
@@ -58,25 +74,22 @@ const TOOLS = [
         find: { type: "string", description: "The exact current text, appearing once on the page" },
         replace: { type: "string", description: "The new text" },
         summary: { type: "string", description: "Short plain-English description of the change" },
+        more_changes: { type: "boolean", description: "True if more changes follow, to skip waiting for the preview" },
       },
       required: ["path", "find", "replace", "summary"],
     },
-    run: async (input) => {
+    run: async ({ more_changes, ...input }) => {
       await changeText(input);
-      return "Saved to the draft. Call draft_status for the preview link.";
+      if (more_changes) return "Saved to the draft. Make the next change.";
+      return describeDraft(await waitForDraft());
     },
   },
   {
     name: "draft_status",
-    description: "See the changes waiting to be published and the preview link.",
+    description: "See the changes waiting to be published and get the preview link, waiting for it if it's still building.",
     inputSchema: { type: "object", properties: {} },
     annotations: { readOnlyHint: true },
-    run: async () => {
-      const draft = await getDraft();
-      if (!draft) return "There are no changes waiting.";
-      const { changes, pages, preview } = draft;
-      return { changes, pages, preview };
-    },
+    run: async () => describeDraft(await waitForDraft()),
   },
 ];
 
