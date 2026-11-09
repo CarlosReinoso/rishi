@@ -1,167 +1,112 @@
-# Carol - Web Agency Project
+# The Speech Heroes
 
-A Next.js web application for managing and displaying movement classes and therapy services.
+Website for [The Speech Heroes](https://thespeechheroes.com), a world of songs, stories and characters that gives children with Speech and Language delays a voice. Created by Rishi Kaushal and the Kaushal family.
 
-## Features
+Built with Next.js and deployed on Vercel.
 
-### Class Management System
+## Pages
 
-- **Dashboard**: Admin interface to manage classes
-- **CRUD Operations**: Create, read, update, and delete classes
-- **Image Management**: Upload and manage class images
-- **Search & Filter**: Search classes by title, description, location, or day
+| Route                  | Content                                                                                 |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| `/`                    | Home: hero, welcome, about, music, characters, book, workshops, resources, contact      |
+| `/about`               | The story behind The Speech Heroes                                                      |
+| `/book`                | _The Speech Heroes vs. The Word Stoppers_, with a link to buy on Amazon                 |
+| `/media`               | In the Media                                                                            |
+| `/faq`                 | Frequently asked questions                                                              |
+| `/newsletter`          | Newsletter sign-up                                                                      |
+| `/contact`             | Contact details                                                                         |
+| `/auth/login`          | Admin login                                                                             |
+| `/dashboard`           | Admin dashboard                                                                         |
 
-### Class Properties
+## Editing content
 
-Each class includes:
+Most of the site's wording lives directly in the components and pages:
 
-- Title
-- Description
-- Class Type (In-Person or Online)
-- Day of the week
-- Time slot
-- Location
-- Booking URL
-- Class image
+- Home page sections: `src/components/*Section.js`
+- Inner pages: `src/app/<page>/page.js`
+- Navigation, email address, Instagram, YouTube and Amazon links: `src/constants.js`
+- Images, audio, video and downloadable resources: `public/`
+- SEO title, description and social sharing: `src/app/layout.js`
 
-### Public Display
+## Website editor
 
-- **Classes Page**: Public-facing timetable showing all active classes
-- **Responsive Design**: Mobile-friendly layout with beautiful animations
-- **Dynamic Content**: Classes are loaded from the database
+The site owner changes wording by chatting with Claude, then publishes from a password-protected page.
 
-## Database Schema
+1. Claude edits a `draft` branch through the connector at `/api/mcp/<CMS_MCP_SECRET>`. It can only change wording in the files listed in `src/utils/cms/site.js`, and it cannot publish.
+2. Vercel builds a preview of the draft.
+3. Pressing **Publish** at `/editor` adds one commit to the live branch beginning with `Publish:`, and Vercel deploys it.
+4. **Go back to before this** at `/editor` restores the wording files only, as a new commit, so code changes are kept.
 
-### Tables
+### Setup
 
-1. **classes**: Stores class information
+- Create a fine-grained GitHub token limited to this repository, with **Contents: read and write** and **Deployments: read**.
+- Add the `CMS_*` variables below to the Vercel project's Production environment. Commits use `CMS_COMMIT_NAME` and `CMS_COMMIT_EMAIL`, which must belong to the Vercel account owner on the Hobby plan.
+- Turn off Vercel Authentication for previews (Project Settings > Deployment Protection) so the owner can open preview links.
+- In Claude, add a custom connector with the URL `https://<site>/api/mcp/<CMS_MCP_SECRET>` and **No sign-in**. Treat that URL as a password.
 
-   - `id`: Unique identifier
-   - `title`: Class name
-   - `description`: Class description
-   - `class_type`: 'in-person' or 'online'
-   - `day`: Day of the week
-   - `time`: Time slot
-   - `location`: Physical location or 'Online'
-   - `booking_url`: URL for booking
-   - `is_active`: Soft delete flag
-   - `created_at`, `updated_at`: Timestamps
+## Tech stack
 
-2. **class_images**: Stores class images
-   - `id`: Unique identifier
-   - `class_id`: Reference to classes table
-   - `image_url`: Image file path
-   - `sort_order`: Image ordering
-   - `created_at`: Timestamp
+- **Framework**: Next.js 15 (App Router), React 19
+- **Styling**: Tailwind CSS, Framer Motion
+- **Database, auth and storage**: Supabase
+- **Email**: Nodemailer through Gmail, for newsletter notifications
+- **Hosting**: Vercel
 
-## Setup Instructions
+## What uses Supabase
 
-### 1. Database Setup
+The public pages are static content and do not read from the database. Supabase is only used by:
 
-Run the SQL files in order:
+- The newsletter: `src/app/api/newsletter/` (table `newsletter_subscribers`)
+- Admin login: `src/app/auth/` and `src/app/dashboard/layout.js`
+- The dashboard: `src/app/dashboard/`, `src/components/dashboard/` and `src/app/hooks/`
+- A keep-alive ping: `src/app/api/keep-alive/`
 
-```bash
-# Create tables
-psql -d your_database -f database/schema.sql
+The dashboard's product and class screens (tables `jewellery`, `jewellery_images`, `classes`, `class_images`) are carried over from an earlier project and are not part of the public site.
 
-# Apply policies
-psql -d your_database -f database/policies.sql
+## Getting started
 
-# Seed initial data
-psql -d your_database -f database/seed.sql
-```
-
-### 2. Environment Variables
-
-Ensure your `.env.local` file contains:
-
-```
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### 3. Storage Bucket
-
-Create a storage bucket named 'images' in Supabase for class image uploads.
-
-### 4. Install Dependencies
+Requires Node.js and npm.
 
 ```bash
-npm install
-# or
-pnpm install
+npm ci --ignore-scripts
 ```
 
-### 5. Run Development Server
+Create `.env.local` with:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+GMAIL_USER=
+GMAIL_APP_PASS=
+
+# Website editor
+CMS_GITHUB_REPO=owner/repo
+CMS_GITHUB_TOKEN=
+CMS_LIVE_BRANCH=master
+CMS_COMMIT_NAME=
+CMS_COMMIT_EMAIL=
+CMS_PASSWORD=
+CMS_SESSION_SECRET=
+CMS_MCP_SECRET=
+```
+
+Never commit this file.
+
+Then start the development server at <http://localhost:3000>:
 
 ```bash
 npm run dev
-# or
-pnpm dev
 ```
 
-## File Structure
+## Scripts
 
-```
-src/
-├── app/
-│   ├── classes/           # Public classes page
-│   ├── dashboard/         # Admin dashboard
-│   │   ├── class/         # Class management
-│   │   │   ├── new/       # Add new class
-│   │   │   └── [classId]/ # Edit existing class
-│   │   └── page.js        # Main dashboard
-│   └── hooks/
-│       └── useClasses.js  # Classes data management
-├── components/
-│   ├── dashboard/
-│   │   ├── admin/
-│   │   │   ├── ClassesGrid.js    # Classes display grid
-│   │   │   └── NoResults.js      # No results message
-│   │   └── ClassFormInputs.js    # Class form component
-│   └── ...                # Other components
-└── config/
-    └── supabase.js        # Supabase configuration
-```
-
-## Usage
-
-### Adding a New Class
-
-1. Navigate to `/dashboard`
-2. Click "Add Class"
-3. Fill in class details
-4. Upload an image
-5. Click "Save Class"
-
-### Editing a Class
-
-1. Navigate to `/dashboard`
-2. Click "Edit" on any class
-3. Modify the details
-4. Click "Save Class"
-
-### Deleting a Class
-
-1. Navigate to `/dashboard`
-2. Click "Delete" on any class
-3. Confirm deletion
-
-## Technologies Used
-
-- **Frontend**: Next.js 14, React, Tailwind CSS
-- **Backend**: Supabase (PostgreSQL, Auth, Storage)
-- **State Management**: React Hooks
-- **Animations**: Framer Motion
-- **Icons**: Heroicons
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+| Command         | Description                      |
+| --------------- | -------------------------------- |
+| `npm run dev`   | Start the development server     |
+| `npm run build` | Build for production             |
+| `npm run start` | Serve the production build       |
+| `npm run lint`  | Run ESLint                       |
 
 ## License
 
