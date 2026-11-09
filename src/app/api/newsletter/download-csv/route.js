@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { isLoggedIn } from "@/utils/cms/session";
 
 export async function GET(request) {
+  if (!(await isLoggedIn())) {
+    return NextResponse.json({ error: "Please log in" }, { status: 401 });
+  }
+
   try {
     // Create a Supabase client using service role key (bypasses RLS)
     // This is for admin-only operations
