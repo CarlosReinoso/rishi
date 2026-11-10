@@ -26,7 +26,7 @@ export const NAV_ITEMS = [
   },
   {
     href: "/newsletter",
-    label: "Newsletter",
+    label: "Waiting List",
   },
   {
     href: "/contact",
