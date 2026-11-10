@@ -47,7 +47,7 @@ export default function NewsletterPage() {
 
   return (
     <>
-      <SectionHero title="Join the Communication Adventure Waiting List" />
+      <SectionHero title="Join Our Newsletter" />
 
       {/* Welcome Message Section */}
       <section className="py-16 md:py-24 bg-white">
@@ -60,25 +60,26 @@ export default function NewsletterPage() {
             className="prose prose-lg max-w-none"
           >
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              Hello, Speech Heroes!
+              Hello there,
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              Get ready for the Communication Adventure, our brand new board game! At The Speech Heroes, we
+              Are you ready to join the adventure? At The Speech Heroes, we
               believe every child's voice matters no matter how they communicate.
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              Now our heroes are leaping off the page and onto the board! Made for children aged 4+ on their communication journey, including those with Speech and Language challenges, the game encourages play between a child and the person supporting them. Play, laugh and take on exciting sound, word, action, emotion and battle challenges together.
+              We are dedicated to empowering children with Speech and Language
+              delay
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-              Join the waiting list and be the first to get:
+              By subscribing to our mailing list, you'll receive:
             </p>
             <ul className="list-disc list-inside text-lg md:text-xl text-gray-700 leading-relaxed mb-6 space-y-2 ml-4">
-              <li>Exclusive first news about the Communication Adventure board game</li>
+              <li>News and updates about our products and books</li>
               <li>
-                Sneak peeks behind the scenes as the game is tested and made
+                Updates on The Speech Heroes Vox Pops and our podcast
               </li>
               <li>
-                Early access and special launch offers before anyone else
+                Special offers and early access to upcoming releases
               </li>
               <li>
                 Heart-warming stories of children and families making progress
@@ -91,22 +92,22 @@ export default function NewsletterPage() {
               communication journey.
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              
-              
+              We promise — no spam. Just meaningful updates whenever we have
+              something truly worth sharing.
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              Sign up in the box below and join the adventure! We'll be thrilled to welcome
+              Simply sign up using the box below. We'll be thrilled to welcome
               you into The Speech Heroes community.
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-              The adventure starts here! Together, we're helping
+              Thank you for being part of this journey. Together, we're helping
               every child become a Speech Hero.
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              
+              Warm wishes,
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
-              
+              Rishi, Priya and Aryan
             </p>
           </motion.div>
         </div>
@@ -144,11 +145,11 @@ export default function NewsletterPage() {
             >
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h2 className="text-3xl md:text-4xl font-figtree text-black mb-6">
-                  Join the Waiting List
+                  Subscribe Now
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-third mb-6"></div>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Be first in line! Enter your email address below to join the waiting list and start
+                  Enter your email address below to join our community and start
                   receiving updates.
                 </p>
 
@@ -162,11 +163,11 @@ export default function NewsletterPage() {
                       <span className="text-green-600 text-2xl">✓</span>
                     </div>
                     <h4 className="text-large font-figtree text-black mb-2">
-                      You're In! Welcome to the Waiting List!
+                      Thank You for Subscribing!
                     </h4>
                     <p className="text-gray-600 mb-6">
-                      You've been successfully added to the waiting list. We'll
-                      keep you updated with all the Communication Adventure news.
+                      You've been successfully added to our newsletter. We'll
+                      keep you updated with the latest news and resources.
                     </p>
                     <button
                       onClick={() => {
@@ -175,7 +176,7 @@ export default function NewsletterPage() {
                       }}
                       className="px-6 py-3 bg-primary text-black rounded-full hover:bg-primary/80 transition-colors font-medium"
                     >
-                      Add Another Email
+                      Subscribe Another Email
                     </button>
                   </motion.div>
                 ) : (
@@ -224,7 +225,7 @@ export default function NewsletterPage() {
                       disabled={isSubmitting}
                       className="w-full bg-primary text-black py-4 px-8 rounded-full font-medium text-lg hover:bg-primary/80 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Joining..." : "Join the Waiting List"}
+                      {isSubmitting ? "Subscribing..." : "Subscribe to Newsletter"}
                     </button>
                   </form>
                 )}
